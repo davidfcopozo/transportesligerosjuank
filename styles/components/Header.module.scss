@@ -1,0 +1,21 @@
+@use '../abstract/Index.module.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+.header {
+  width: 100%;
+  margin-inline: auto;
+  font-family: 'Fugaz One', sans-serif;
+  background-color: $blueBg;
+  
+  div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $lightGrayBg;
+
+    a {
+      text-decoration: none;
+      color: $darkBlueFont;
+    }
+  }
+}

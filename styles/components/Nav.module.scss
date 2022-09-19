@@ -1,0 +1,10 @@
+@use '../abstract/Index.module.scss' as *;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+
+
+}
