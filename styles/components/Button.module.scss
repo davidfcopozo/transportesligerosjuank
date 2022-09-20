@@ -1,12 +1,13 @@
 @use '../abstract/Index.module.scss' as *;
 
 .btn {
-  @include button(100px, $orangeBg, $whiteFont, 14px);
+  @include button(100px, $orangeBg, $whiteFont, .7rem);
   height: fit-content;
   padding: 0.5em;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-    text-align: center;
-    border: none;
+  text-align: center;
+  border: none;
+  
 }
