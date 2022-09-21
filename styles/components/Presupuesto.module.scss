@@ -1,0 +1,134 @@
+@use '../abstract/Index.module.scss' as *;
+
+.card {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 425px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(#999, .25);
+  padding: .75rem;
+
+  .cardImage {
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 65%;
+    background-image: url('../../assets/presupuesto.jpg');
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 0 55%;
+    box-shadow: inset 190px 1px 75px rgba(0, 0, 0, 0.68);
+    position: relative;
+
+    .cardHeading {
+      position: absolute;
+      left: 10%;
+      top: 15%;
+      right: 10%;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: $lightGrayBg ;
+      line-height: 1.222;
+    
+      small {
+        display: block;
+        color: $lightGrayBg;
+        font-size: .75em;
+        font-weight: 400;
+        margin-top: .50em;
+      }
+    }
+  }
+
+}
+.form {
+  width: 90%;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  select:invalid {
+    color: $grayFont;
+  }
+  
+    input[type="date"]:valid::-webkit-datetime-edit {
+      color: #000000;
+    }
+
+    h3 {
+      color: $darkBlueFont;
+      margin-left: .8rem;
+    }
+
+  .formControl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: .8rem;
+  }
+
+  .inputLabel {
+    color: $darkBlueFont;
+    transition: .25s ease;
+  }
+
+  .inputField {
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+    font: inherit;
+    font-size: 1rem;
+    padding: .80rem 0;
+
+    &:focus,
+    &:valid {
+      outline: 0;
+      border-bottom-color: $green;
+    }
+
+  }
+    .inputField::placeholder, textarea::placeholder, input[type="date"]::-webkit-datetime-edit-text,
+    input[type="date"]::-webkit-datetime-edit-month-field,
+    input[type="date"]::-webkit-datetime-edit-day-field,
+    input[type="date"]::-webkit-datetime-edit-year-field, input[type=date]:invalid::-webkit-datetime-edit  {
+    font-size: .8rem;
+    color: $grayFont;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;    
+  }
+
+    
+  
+    
+    .actionBtn {
+      font: inherit;
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      padding: 1em;
+      width: 100%;
+      font-weight: 500;
+      background-color: $orangeBg;
+      border-radius: 6px;
+      color: #FFF;
+      border: 0;
+  
+      &:focus {
+        outline: 0;
+      }
+    }
+  .terms {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: .875rem;
+    color: #8597a3;
+
+    a {
+      display: block;
+      color: #6658d3;
+      text-decoration: none;
+    }
+  }
+}
+

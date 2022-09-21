@@ -1,7 +1,8 @@
 import React from "react";
+import Presupuesto from "../components/Presupuesto";
 
 const about = () => {
-  return <h1>This is the about page</h1>;
+  return <Presupuesto />;
 };
 
 export default about;
