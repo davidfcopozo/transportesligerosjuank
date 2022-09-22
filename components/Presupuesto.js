@@ -64,6 +64,8 @@ const Presupuesto = () => {
       onSubmit={onSubmit}
     >
       {/* The onSubmit method catches the submitted form's values */}
+      {/* <div className={presupuestoStyles.formContainer}>
+        <button className={presupuestoStyles.closeBtn}>X</button> */}
       <Form className={presupuestoStyles.form}>
         <div className={presupuestoStyles.card}>
           <div className={presupuestoStyles.cardImage}>
@@ -215,6 +217,7 @@ const Presupuesto = () => {
           </p>
         </div>
       </Form>
+      {/* </div> */}
     </Formik>
   );
 };

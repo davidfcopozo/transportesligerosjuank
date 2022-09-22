@@ -1,0 +1,8 @@
+@use '../abstract/Index.module.scss' as *;
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: auto;
+  flex-grow: 1;
+}

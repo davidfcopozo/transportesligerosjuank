@@ -11,6 +11,7 @@
   margin-inline: auto;
   font-family: 'Fugaz One', sans-serif;
   background-color: $blueBg;
+  z-index: 100000;
   
   div:nth-of-type(1) {
     display: flex;
