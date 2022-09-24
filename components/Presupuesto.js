@@ -31,10 +31,10 @@ const Presupuesto = () => {
       .required("Campo requerido"),
 
     desde: Yup.string().required(
-      "Por favor indique desde donde se hara el servicio"
+      "Por favor indique desde donde se hará el servicio"
     ),
     hasta: Yup.string().required(
-      "Por favor indique hasta donde se hara el servicio"
+      "Por favor indique hasta donde se hará el servicio"
     ),
 
     fecha: Yup.date().required(`Por favor seleccione la fecha del servicio`),
