@@ -3,8 +3,10 @@ import presupuestoStyles from "../styles/components/Presupuesto.module.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import TextError from "./TextError";
+import { onSubmit } from "../helpers/onSumit";
 
 const Presupuesto = () => {
+  ``;
   const initialValues = {
     servicio: "",
     nombre: "",
@@ -14,24 +16,6 @@ const Presupuesto = () => {
     hasta: "",
     fecha: "",
     detalles: "",
-  };
-
-  const onSubmit = (values) => {
-    console.log("Data from form submition", values);
-    /* fetch("https://formsubmit.co/ajax/your@email.com", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({
-      name: "FormSubmit",
-      message: "I'm from Devro LABS",
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.log(error)); */
   };
 
   const validationSchema = Yup.object({

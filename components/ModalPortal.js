@@ -42,7 +42,7 @@ const ModalPortal = ({ children, isOpen, closeModal }) => {
       exit="exit"
     >
       <button className={modalPortalStyles.closeBtn} onClick={closeModal}>
-        X
+        &times;
       </button>
       {children}
     </motion.div>

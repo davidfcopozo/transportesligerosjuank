@@ -26,15 +26,13 @@
       left: 10%;
       top: 15%;
       right: 10%;
-      font-size: 1.75rem;
+      @include font(inherit, $xlSize, $lightGrayBg);
       font-weight: 700;
-      color: $lightGrayBg ;
       line-height: 1.222;
     
       small {
         display: block;
-        color: $lightGrayBg;
-        font-size: .75em;
+        @include font(inherit, $xsSize, $lightGrayBg);
         font-weight: 400;
         margin-top: .50em;
       }
@@ -42,49 +40,17 @@
   }
 
 }
-
-/* .formContainer {
-  display: flex;
-  position: fixed;
-  justify-content: center;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.75);
-  height: 100vh;
-  overflow-y: auto;
-  padding: .5rem;
-  padding-bottom: 6.7rem;
-  
-  .closeBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: transparent;
-    font-size: .8rem;
-    color: $grayFont;
-    cursor: pointer;
-    outline: none;
-    border: 1px solid $darkBlueFont;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    right: 10%;
-    top: 2%;
-    z-index: 999;
-  } */
   
   .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: $franklinGothic;
     border-radius: 10px;
-    
     position: relative;
     height: fit-content;
     background-color: rgb(255, 255, 255);
-   /*  display: none; */
     
     select:invalid {
       color: $grayFont;
@@ -108,8 +74,9 @@
     }
   
     .inputLabel {
-      color: $darkBlueFont;
+      @include font(inherit, $mdSize, $darkBlueFont);
       transition: .25s ease;
+
     }
   
     .inputField {
@@ -117,8 +84,7 @@
       z-index: 1;
       background-color: transparent;
       border-bottom: 2px solid #eee;
-      font: inherit;
-      font-size: 1rem;
+      @include font(inherit, $mdSize, inherit);
       padding: .80rem 0;
   
       &:focus,
@@ -132,24 +98,20 @@
       input[type="date"]::-webkit-datetime-edit-month-field,
       input[type="date"]::-webkit-datetime-edit-day-field,
       input[type="date"]::-webkit-datetime-edit-year-field, input[type=date]:invalid::-webkit-datetime-edit  {
-      font-size: .8rem;
-      color: $grayFont;
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      @include font($franklinGothic, $xsSize, $grayFont);
       font-weight: 600;    
     }
   
       .actionBtn {
-        font: inherit;
         margin-top: 2rem;
         margin-inline: auto;
         position: relative;
-        font-size: 1.25rem;
+        @include font(inherit, $mdSize, $whiteFont);
         padding: 1rem;
         width: 90%;
         font-weight: 500;
-        background-color: $orangeBg;
         border-radius: 6px;
-        color: #FFF;
+        background-color: $orangeBg;
         border: 0;
     
         &:focus {
@@ -159,8 +121,8 @@
     .terms {
       padding: 1rem 1rem;
       text-align: center;
-      font-size: .875rem;
-      color: #8597a3;
+    
+      @include font(inherit, $xsSize, #8597a3);
   
       a {
         display: block;
