@@ -86,12 +86,17 @@
       border-bottom: 2px solid #eee;
       @include font(inherit, $mdSize, inherit);
       padding: .80rem 0;
+      
+      & * {
+        @include font(inherit, $xsSize, inherit);
+      }
   
       &:focus,
       &:valid {
         outline: 0;
         border-bottom-color: $green;
       }
+
   
     }
       .inputField::placeholder, textarea::placeholder, input[type="date"]::-webkit-datetime-edit-text,
