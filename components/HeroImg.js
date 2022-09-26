@@ -1,13 +1,10 @@
 import React from "react";
 import Button from "./Button";
-import hero from "../assets/heroImg.jpg";
-import Image from "next/image";
 import heroImgStyles from "../styles/components/HeroImg.module.scss";
 
 const HeroImg = () => {
   return (
     <div className={heroImgStyles.heroContainer}>
-      {/* <Image src={hero} layout="fill" objectFit="cover" /> */}
       <div className={heroImgStyles.heroImgContainer}>
         <img src="heroImg.jpg" alt="" />
       </div>

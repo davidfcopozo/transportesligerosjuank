@@ -187,8 +187,11 @@ const Presupuesto = () => {
               className={presupuestoStyles.actionBtn}
               type="submit"
               onClick={clickHandler}
-              disabled={!formik.isValid ? true : false}
-              style={{ backgroundColor: !formik.isValid && "gray" }}
+              disabled={!formik.isValid || formik.isSubmitting ? true : false}
+              style={{
+                backgroundColor:
+                  !formik.isValid || (formik.isSubmitting && "gray"),
+              }}
             >
               Enviar
             </button>
@@ -202,7 +205,6 @@ const Presupuesto = () => {
           </Form>
         );
       }}
-      {/* </div> */}
     </Formik>
   );
 };

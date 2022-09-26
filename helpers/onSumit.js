@@ -1,7 +1,8 @@
 import * as Yup from "yup";
 
-export const onSubmit = (values) => {
-  //console.log("Data from form submition", values);
+export const onSubmit = (values, onSubmitProps) => {
+  console.log("Data from form submition", values);
+  console.log("Data from onSubmitProps", onSubmitProps);
 
   fetch("https://formsubmit.co/ajax/indidseo@gmail.com", {
     method: "POST",
@@ -21,6 +22,10 @@ export const onSubmit = (values) => {
     }),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+      onSubmitProps.setSubmitting(false);
+      onSubmitProps.resetForm();
+    })
     .catch((error) => console.log(error));
 };
