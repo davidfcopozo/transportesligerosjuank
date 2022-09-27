@@ -1,5 +1,3 @@
-import * as Yup from "yup";
-
 export const onSubmit = (values, onSubmitProps) => {
   console.log("Data from form submition", values);
   console.log("Data from onSubmitProps", onSubmitProps);
@@ -11,14 +9,14 @@ export const onSubmit = (values, onSubmitProps) => {
       Accept: "application/json",
     },
     body: JSON.stringify({
-      servicio: values.servicio,
-      nombre: values.nombre,
-      numTel: values.numTel,
-      correo: values.correo,
-      desde: values.desde,
-      hasta: values.hasta,
-      fecha: values.fecha,
-      detalles: values.detalles,
+      Servicio: values.servicio,
+      Nombre: values.nombre,
+      Telefono: values.numTel,
+      Correo: values.correo,
+      Desde: values.desde,
+      Hasta: values.hasta,
+      Fecha: values.fecha,
+      Detalles: values.detalles,
     }),
   })
     .then((response) => response.json())

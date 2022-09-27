@@ -1,0 +1,7 @@
+@use '../abstract/Index.module.scss' as *;
+
+.checkMark {
+  width: 150px;
+  height: auto;
+  fill: $green;
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import modalPortalStyles from "../styles/components/ModalPortal.module.scss";
-
 const ModalPortal = ({ children, isOpen, closeModal }) => {
   const handleModalContainerClick = (e) => {
     e.stopPropagation();
