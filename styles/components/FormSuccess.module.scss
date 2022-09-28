@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 .successContainer {
-  display: flex;
+  display: none;
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -22,13 +22,35 @@
     background-color: $whiteFont;
     align-items: center;
     border-radius: 10px;
-    @include font($fugazOne, $mdSize, $darkBlueFont);
     padding: 35.5rem;
-
     width: 90%;
     max-width: 425px;
     box-shadow: 0 10px 20px 0 rgba(#999, .25);
     padding: .75rem;
-  
+    @include font($fugazOne, $mdSize, $darkBlueFont);
+    
+    p {
+      padding-block: 1em;
+      text-align: center;
+      @include font(inherit, $xsSize, $grayFont);
+    }
+    button {
+      border-radius: 10px;
+      @include button(fit-content, inherit, $whiteFont, $mdSize);
+      border: none;
+      padding: .3rem .8rem;
+    }
+
+    .imgContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40%;
+
+    }
   }
+}
+
+.isActive {
+  display: flex;
 }

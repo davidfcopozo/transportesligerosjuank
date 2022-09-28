@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import presupuestoStyles from "../styles/components/Presupuesto.module.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
-/* import { onSubmit } from "../helpers/onSumit"; */
 import useFetch from "../hooks/useFetch";
 import yupFormValidation from "../helpers/yupFormValidation";
 import FormSuccess from "./FormSuccess";
@@ -26,7 +25,7 @@ const Presupuesto = () => {
 
   return (
     <>
-      <FormSuccess fail={fail} success={success} message={success.message} />
+      <FormSuccess fail={fail} success={success} />
 
       <Formik
         initialValues={initialValues}

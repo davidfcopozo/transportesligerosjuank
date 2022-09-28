@@ -50,6 +50,7 @@ const Header = () => {
         </div>
         <Nav />
       </header>
+
       <ModalPortal isOpen={isOpen} closeModal={closeModal}>
         <Presupuesto />
       </ModalPortal>
