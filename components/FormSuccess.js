@@ -3,19 +3,16 @@ import formSuccessStyles from "../styles/components/FormSuccess.module.scss";
 import { motion } from "framer-motion";
 import xMark from "../assets/xMark.svg";
 import checkMark from "../assets/checkMark.svg";
-import useFetch from "../hooks/useFetch";
+import Image from "next/image";
 
 const FormSuccess = ({ success, fail }) => {
   const [open, setOpen] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-
-  useFe;
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
     setOpen(success.success);
-    if (open) {
-      setSuccessMessage("El formulario ha sido enviado");
-      console.log(open);
+    if (success || fail) {
+      setFormSubmitted(true);
     }
   }, [success]);
 
@@ -42,18 +39,36 @@ const FormSuccess = ({ success, fail }) => {
     },
   };
 
+  const handleModalContainerClick = (e) => {
+    e.stopPropagation();
+    const modalContainer = document.getElementById("successContainer");
+    modalContainer.addEventListener("click", (e) => {
+      if (e.target === modalContainer) {
+        setFormSubmitted(false);
+      }
+    });
+  };
+
   const bgColor = open ? "#43C467" : "#ff0000";
 
   return (
     <motion.div
       initial="hidden"
       variants={dropIn}
-      animate={success || fail ? "visible" : "hidden"}
+      animate={formSubmitted ? "visible" : "hidden"}
       exit="exit"
       className={`${formSuccessStyles.successContainer} ${
-        (success || fail) && formSuccessStyles.isActive
+        formSubmitted && formSuccessStyles.isActive
       }`}
+      id="successContainer"
+      onClick={handleModalContainerClick}
     >
+      {/* <Image
+            layout="fill"
+            className={formSuccessStyles.image}
+            src={checkMark.src}
+            alt="Cotejo verde"
+          /> */}
       <div className={formSuccessStyles.messageBox}>
         <div className={formSuccessStyles.imgContainer}>
           {open ? (
@@ -62,6 +77,14 @@ const FormSuccess = ({ success, fail }) => {
             <img src={xMark.src} alt="Letra X de color rojo" />
           )}
         </div>
+        {/* <Image
+              layout="fill"
+              width="20vh"
+              height="200vw"
+              className={formSuccessStyles.image}
+              src={xMark.src}
+              alt="Letra X de color rojo"
+            /> */}
 
         <h2>{open ? "Enhorabuena!" : "Lo Sentimos"}</h2>
         <p>
@@ -73,7 +96,7 @@ const FormSuccess = ({ success, fail }) => {
           style={{ backgroundColor: `${bgColor}` }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          //onClick={() => setSubmitted(false)}
+          onClick={() => setFormSubmitted(false)}
         >
           {open ? "Vale!" : "Reintentar"}
         </motion.button>

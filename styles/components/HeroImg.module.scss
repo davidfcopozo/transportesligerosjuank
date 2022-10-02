@@ -2,21 +2,21 @@
 
 .heroContainer {
   position: relative;
-  
+  width: 100%;
+  margin-top: 4em;
   
   .heroImgContainer {
-    height: 30vh;
-    border: solid red;
+    width: 100%;
     
     img {
-      max-height: 100%;
-      width: 100vh;
+      height: 40vh;
+      width: 100vw;
       object-fit: cover;
     }
   }
   
 }
-/* Place text in the middle of the image */
+
 .heroText {
   @include font(inherit, $xsSize, $whiteFont);
   text-align: center;

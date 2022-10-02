@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import modalPortalStyles from "../styles/components/ModalPortal.module.scss";
 
-const ModalPortal = ({ children, isOpen, closeModal }) => {
+const ModalPortal = ({ children, isOpen, closeModal, data, error }) => {
   const handleModalContainerClick = (e) => {
     e.stopPropagation();
+    const modalContainer = document.getElementById("modalContainer");
+    modalContainer.addEventListener("click", (e) => {
+      if (e.target === modalContainer) {
+        closeModal();
+      }
+    });
   };
 
   const dropIn = {
@@ -30,6 +36,12 @@ const ModalPortal = ({ children, isOpen, closeModal }) => {
     },
   };
 
+  useEffect(() => {
+    if (data.success || error) {
+      closeModal();
+    }
+  }, [data]);
+
   return (
     <motion.div
       className={`${modalPortalStyles.formContainer} ${
@@ -40,6 +52,7 @@ const ModalPortal = ({ children, isOpen, closeModal }) => {
       variants={dropIn}
       animate={isOpen ? "visible" : "hidden"}
       exit="exit"
+      id="modalContainer"
     >
       <button className={modalPortalStyles.closeBtn} onClick={closeModal}>
         &times;

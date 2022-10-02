@@ -8,6 +8,10 @@ const Meta = ({ title, keywords, description }) => {
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      ></link>
       <link rel="icon" href="/favicon.ico" />
       <title>{title}</title>
     </Head>

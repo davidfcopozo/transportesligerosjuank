@@ -46,7 +46,18 @@
       align-items: center;
       justify-content: center;
       height: 40%;
-
+      text-align: center;
+      
+      /* Styles for Next Js Image component */
+     /*  .image {
+        position: relative !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        min-height: unset !important;
+        min-width: unset !important;
+        width: 100% !important;
+        height: 100% !important;
+      } */
     }
   }
 }

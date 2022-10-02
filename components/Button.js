@@ -8,6 +8,7 @@ const Button = ({ ...props }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       className={btnStyles.btn}
+      onClick={props.clickHandler}
     >
       {props.value}
     </motion.button>

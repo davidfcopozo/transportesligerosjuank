@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/Link";
 import Image from "next/image";
 import Nav from "./Nav";
@@ -12,9 +12,26 @@ import btnStyles from "../styles/components/Button.module.scss";
 import { motion } from "framer-motion";
 import ModalPortal from "./ModalPortal";
 import Presupuesto from "./Presupuesto";
+import useFetch from "../hooks/useFetch";
+import FormSuccess from "./FormSuccess";
 
 const Header = () => {
   const [isOpen, closeModal, openModal] = useModal();
+  const [navIsOpen, closeNav, openNav] = useModal();
+  const [data, error, submitData] = useFetch();
+
+  const [success, setSuccess] = useState("");
+  const [fail, setFail] = useState("");
+
+  useEffect(() => {
+    if (data.success) {
+      setSuccess(data);
+      console.log("This worked");
+    } else {
+      console.log("It didn't work");
+      setFail(error);
+    }
+  }, [data]);
 
   return (
     <>
@@ -45,15 +62,22 @@ const Header = () => {
               PRESUPUESTO
             </motion.button>
 
-            <Button value={<HumburgerIcon />} />
+            <Button value={<HumburgerIcon />} clickHandler={openNav} />
           </div>
         </div>
-        <Nav />
+        <Nav navIsOpen={navIsOpen} closeNav={closeNav} />
       </header>
 
-      <ModalPortal isOpen={isOpen} closeModal={closeModal}>
-        <Presupuesto />
+      <ModalPortal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        data={data}
+        error={error}
+      >
+        <Presupuesto data={data} error={error} submitData={submitData} />
       </ModalPortal>
+
+      <FormSuccess fail={fail} success={success} />
     </>
   );
 };

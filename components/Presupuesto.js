@@ -1,32 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import presupuestoStyles from "../styles/components/Presupuesto.module.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
-import useFetch from "../hooks/useFetch";
 import yupFormValidation from "../helpers/yupFormValidation";
-import FormSuccess from "./FormSuccess";
 
-const Presupuesto = () => {
+const Presupuesto = ({ data, error, submitData }) => {
   const { initialValues, validationSchema } = yupFormValidation();
   const currentDate = new Date().toJSON().slice(0, 10);
-  const [data, error, submitData] = useFetch();
-  const [success, setSuccess] = useState("");
-  const [fail, setFail] = useState("");
-
-  useEffect(() => {
-    if (data.success) {
-      setSuccess(data);
-      console.log("This worked");
-    } else {
-      console.log("It didn't work");
-      setFail(error);
-    }
-  }, [data]);
 
   return (
     <>
-      <FormSuccess fail={fail} success={success} />
-
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

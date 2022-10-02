@@ -1,5 +1,49 @@
 @use '../abstract/Index.module.scss' as *;
 
-.nav {
+
+.navContainer {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 100vh;
+  z-index: 10000;
+  top: 0;
   
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    @include font(inherit, $mdSize, $whiteFont);
+    
+    li {
+      padding-inline: 1rem;
+      padding-block: 1rem;
+    }
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(227, 86%, 45%, 90%);
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 80vw;
+
+  }
+}
+
+.navActive {
+  display: flex;
 }
