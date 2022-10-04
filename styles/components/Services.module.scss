@@ -1,0 +1,18 @@
+@use '../abstract/Index.module.scss' as *;
+
+.serviceSection {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: .2em;
+  margin-inline: auto;
+  
+  .title {
+    @include font($fugazOne, $xlSize, $darkBlueFont );
+    border-left: .2em solid $orangeBg;
+    padding-left: .2em;
+    margin-bottom: 1em;
+  }
+}

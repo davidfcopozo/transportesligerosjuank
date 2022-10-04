@@ -34,8 +34,10 @@ const Nav = ({ navIsOpen, closeNav }) => {
 
   const handleNavContainerClick = (e) => {
     const navContainer = document.getElementById("navDiv");
+    const navLi = document.querySelector(".navLi").classList;
+
     navContainer.addEventListener("click", (e) => {
-      if (e.target === navContainer) {
+      if (e.target === navContainer || e.target.className === navLi) {
         e.stopPropagation();
         closeNav();
       }
@@ -55,15 +57,15 @@ const Nav = ({ navIsOpen, closeNav }) => {
       onClick={handleNavContainerClick}
     >
       <ul className={`${navStyles.nav}`}>
-        <li>
+        <li className="navLi">
           <FontAwesomeIcon icon={faHouseChimney} />
           Inicio
         </li>
-        <li>
+        <li className="navLi">
           <FontAwesomeIcon icon={faTruckFast} />
           Servicios
         </li>
-        <li>
+        <li className="navLi">
           <FontAwesomeIcon icon={faHeadset} />
           Contacto
         </li>
