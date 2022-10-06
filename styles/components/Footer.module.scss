@@ -1,8 +1,29 @@
 @use '../abstract/Index.module.scss' as *;
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  margin-top: auto;
-  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $footerBg;
+  @include font($franklinGothic, $xsSize, $whiteFont);
+  
+  & > div {
+    display: flex;
+    gap: 2em;
+    padding-block: 3em;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a{
+      @include font($sansSerif, $xsSize, $whiteFont);
+      font-weight: lighter;
+      text-decoration: none;
+      list-style: none;
+
+    }
+  }
 }

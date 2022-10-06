@@ -18,6 +18,7 @@ const ServiceCard = ({ img, title, paragraph }) => {
       </div>
       <div className={serviceCardStyles.textsWrapper}>
         <h2>{title}</h2>
+        <span></span>
         <p>{paragraph}</p>
       </div>
     </div>

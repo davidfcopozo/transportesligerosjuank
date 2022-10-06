@@ -3,7 +3,6 @@ import Link from "next/Link";
 import Image from "next/image";
 import Nav from "./Nav";
 import headerStyles from "../styles/components/Header.module.scss";
-import PhoneIcon from "./icons/PhoneIcon";
 import logo from "../assets/juank.svg";
 import Button from "./Button";
 import HumburgerIcon from "./icons/HumburgerIcon";
@@ -14,6 +13,8 @@ import ModalPortal from "./ModalPortal";
 import Presupuesto from "./Presupuesto";
 import useFetch from "../hooks/useFetch";
 import FormSuccess from "./FormSuccess";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isOpen, closeModal, openModal] = useModal();
@@ -38,7 +39,7 @@ const Header = () => {
       <header className={headerStyles.header}>
         <div>
           <a href="tel:+34664067981">
-            <PhoneIcon /> 664 067 981
+            <FontAwesomeIcon icon={faPhone} /> 664 067 981
           </a>
         </div>
 

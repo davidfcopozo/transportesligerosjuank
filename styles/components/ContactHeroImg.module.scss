@@ -1,0 +1,45 @@
+@use '../abstract/Index.module.scss' as *;
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 4em;
+  margin-bottom: 1em;
+  
+  .heroImgContainer {
+    width: 100%;
+    height: 40vh;
+    box-shadow: 10em 4px 10em rgba(0, 0, 0, 0.50) inset;
+    background-image: url('../../assets/chico-furgoneta.jpg');
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 0 55%;
+    
+ /*    img {
+      height: 40vh;
+      width: 100vw;
+      object-fit: cover;
+    } */
+  }
+  
+}
+
+.heroText {
+  @include font(inherit, $xsSize, $whiteFont);
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  ;
+
+  button {
+    @include button(100px,
+      $orangeBg,
+      $whiteFont,
+      .7rem);
+      margin-top: 1rem;
+      margin-inline: 0;
+  }
+}
