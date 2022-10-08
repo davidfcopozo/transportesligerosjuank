@@ -2,6 +2,7 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -10,10 +11,10 @@
   
   & > div {
     display: flex;
-    gap: 2em;
     padding-block: 3em;
     
     div {
+      gap: 2em;
       display: flex;
       flex-direction: column;
     }
@@ -26,4 +27,42 @@
 
     }
   }
+    hr {
+      position: relative;
+      background-color: #E7E8EA;
+      width: 80%;
+      opacity: 0.2;
+      margin: 0;
+    }
+
+    .socialFooter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      padding-bottom: 3em;
+
+      .imgContainer {
+        width: 100%;
+
+        img {
+          object-fit: cover !important;
+        }
+      }
+
+      .footprint {
+        display: flex;
+        flex-direction: row;
+
+        & div {
+          width: 4em;
+          height: auto;
+          padding: 1em;
+          border-radius: 50%;
+          border: solid 1px $lightGrayBg;
+          margin-inline: 1em;
+        }
+      }
+    }
 }
