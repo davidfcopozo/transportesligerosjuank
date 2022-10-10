@@ -1,0 +1,18 @@
+ @use '../abstract/Index.module.scss' as *;
+ 
+ .footprint {
+   max-width: 100%;
+   padding: 1em;
+   border-top: 0.1em solid rgb(231, 232, 234, 0.45);
+   color: $lightGrayBg;
+   background: $footerBg;
+
+   p {
+     @include font($fugazOne, $xsSize, $whiteFont);
+     text-align: center;
+
+     a {
+       color: $orangeBg;
+     }
+   }
+ }

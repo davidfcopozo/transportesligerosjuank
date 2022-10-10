@@ -13,18 +13,22 @@
     display: flex;
     padding-block: 3em;
     
-    div {
-      gap: 2em;
-      display: flex;
-      flex-direction: column;
-    }
-
+    
     a{
       @include font($sansSerif, $xsSize, $whiteFont);
       font-weight: lighter;
       text-decoration: none;
       list-style: none;
-
+      
+    }
+  }
+  .contactIcons {
+    gap: 2em;
+    display: flex;
+    
+    div {
+      display: flex;
+      flex-direction: column;
     }
   }
     hr {
@@ -56,8 +60,8 @@
         flex-direction: row;
 
         & div {
-          width: 4em;
-          height: auto;
+          width: 3em;
+          height: 3em;
           padding: 1em;
           border-radius: 50%;
           border: solid 1px $lightGrayBg;

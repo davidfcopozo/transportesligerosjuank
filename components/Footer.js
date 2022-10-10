@@ -9,11 +9,12 @@ import {
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import logoIcon from "../assets/juank-truck.svg";
 import Image from "next/image";
+import Footprint from "./Footprint";
 
 const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
-      <div>
+      <div className={footerStyles.contactIcons}>
         <div>
           <FontAwesomeIcon icon={faPhone} />
           <a href="tel:+34664067981">664 067 981</a>
@@ -47,6 +48,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <Footprint />
     </footer>
   );
 };
