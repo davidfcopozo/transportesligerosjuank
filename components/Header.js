@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import headerStyles from "../styles/components/Header.module.scss";
 import logo from "../assets/juank.svg";
 import Button from "./Button";
-import HumburgerIcon from "./icons/HumburgerIcon";
+/* import HumburgerIcon from "./icons/HumburgerIcon"; */
 import useModal from "../hooks/useModal";
 import btnStyles from "../styles/components/Button.module.scss";
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ import Presupuesto from "./Presupuesto";
 import useFetch from "../hooks/useFetch";
 import FormSuccess from "./FormSuccess";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isOpen, closeModal, openModal] = useModal();
@@ -63,7 +63,15 @@ const Header = () => {
               PRESUPUESTO
             </motion.button>
 
-            <Button value={<HumburgerIcon />} clickHandler={openNav} />
+            <Button
+              value={
+                <FontAwesomeIcon
+                  icon={faBars}
+                  style={{ width: "2em", height: "fit-content" }}
+                />
+              }
+              clickHandler={openNav}
+            />
           </div>
         </div>
         <Nav navIsOpen={navIsOpen} closeNav={closeNav} />

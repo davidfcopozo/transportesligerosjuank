@@ -27,10 +27,10 @@
   transform: translate(-50%, -50%);
 
   button {
-    @include button(100px,
+    @include button(10em,
       $blueBg,
       $whiteFont,
-      .7rem);
+      $xsSize);
       margin-top: 1rem;
   }
 }

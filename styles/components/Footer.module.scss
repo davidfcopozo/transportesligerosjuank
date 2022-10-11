@@ -29,6 +29,7 @@
     div {
       display: flex;
       flex-direction: column;
+      gap: 1em;
     }
   }
     hr {
@@ -52,6 +53,7 @@
 
         img {
           object-fit: cover !important;
+          display: block  ;
         }
       }
 

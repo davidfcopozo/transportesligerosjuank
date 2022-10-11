@@ -9,10 +9,10 @@ const ServiceCard = ({ img, title, paragraph }) => {
         <Image
           className={serviceCardStyles.imgWrapper}
           src={img}
-          layout="fixed"
+          layout="responsive"
           width="100%"
           height="100%"
-          objectFit="contain"
+          objectFit="cover"
           objectPosition="center"
         />
       </div>

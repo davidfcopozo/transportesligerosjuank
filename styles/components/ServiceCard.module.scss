@@ -11,18 +11,24 @@
   padding-bottom: 1em;
   margin-bottom: 2em;
   transition: all .5s ease-in-out;
+  display: block ;
   
   &:hover {
     scale: 1.05;
   }
   
   .imgWrapper {
-    //position: absolute;
     height: 50%;
     margin-bottom: .5em;
+    
     & > img {
+      //display: block !important;
+      /* min-width: 100% !important;
       min-width: 100% !important;
-      min-height: 100% !important;
+      max-height: 100% !important;
+      max-height: 100% !important; */
+      width: 100% !important;
+      height: auto !important;
     }
   }
   
