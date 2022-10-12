@@ -1,0 +1,28 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import whatsAppIconStyles from "../styles/components/WhatsAppIcon.module.scss";
+
+const WhatsAppIcon = () => {
+  const iconStyles = {
+    width: "2em",
+    color: "#ffffff",
+    height: "auto",
+  };
+  return (
+    <a
+      href="https://wa.me/34664067981"
+      target="_blank"
+      rel="noreferrer"
+      className={whatsAppIconStyles.iconContainer}
+    >
+      <FontAwesomeIcon
+        className={whatsAppIconStyles.waIcon}
+        style={iconStyles}
+        icon={faWhatsapp}
+      />
+    </a>
+  );
+};
+
+export default WhatsAppIcon;

@@ -8,11 +8,7 @@ const Footprint = () => {
     <div className={footprintStyles.footprint} data-testid="footprint">
       <p>
         Diseñado y construido por <br />
-        <a
-          href="https://davidfrancisco.netlify.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://davidfrancisco.dev/" target="_blank" rel="noreferrer">
           David Francisco
         </a>{" "}
         con <FontAwesomeIcon icon={faMugHot} />

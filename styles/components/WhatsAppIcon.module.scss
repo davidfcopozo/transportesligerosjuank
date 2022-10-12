@@ -1,0 +1,27 @@
+@use '../abstract/Index.module.scss' as *;
+
+.iconContainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 2em;
+  border-radius: 50%;
+  transition: opacity 250ms ease;
+  background: transparent;
+  outline: none;
+  right: 5%;
+  bottom: 2%;
+  margin-bottom: 0.5em;
+  background-color: $green;
+
+ /*  .wapIcon {
+    width: 2em !important;
+    color: $whiteFont;
+  } */
+}

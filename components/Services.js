@@ -5,6 +5,7 @@ import vanAbierta from "../assets/van-abierta.jpg";
 import recogidaTienda from "../assets/recogida-tienda.jpg";
 import servicioEmbalaje from "../assets/heroImg.jpg";
 import mercanciaPaletizada from "../assets/mercancia-paletizada.jpg";
+import retiradaEscombros from "../assets/retirada-escombros.jpg";
 
 const Services = () => {
   return (
@@ -30,7 +31,7 @@ const Services = () => {
       />
 
       <ServiceCard
-        img={servicioEmbalaje.src}
+        img={retiradaEscombros.src}
         title="Retirada de Escombros"
         paragraph="Retiramos los escombros de tus obras de manera rápida y eficaz."
       />
