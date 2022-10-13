@@ -4,15 +4,24 @@
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding-left: .2em;
   margin-inline: auto;
+  
+  .cardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+    }
   
   .title {
     @include font($fugazOne, $xlSize, $darkBlueFont );
     border-left: .2em solid $orangeBg;
     padding-left: .2em;
     margin-bottom: 1em;
+    text-align: left;
   }
 }

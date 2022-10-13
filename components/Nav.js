@@ -58,16 +58,13 @@ const Nav = ({ navIsOpen, closeNav }) => {
     >
       <ul className={`${navStyles.nav}`}>
         <li className="navLi">
-          <FontAwesomeIcon icon={faHouseChimney} />
-          Inicio
+          <FontAwesomeIcon icon={faHouseChimney} /> Inicio
         </li>
         <li className="navLi">
-          <FontAwesomeIcon icon={faTruckFast} />
-          Servicios
+          <FontAwesomeIcon icon={faTruckFast} /> Servicios
         </li>
         <li className="navLi">
-          <FontAwesomeIcon icon={faHeadset} />
-          Contacto
+          <FontAwesomeIcon icon={faHeadset} /> Contacto
         </li>
       </ul>
     </motion.nav>

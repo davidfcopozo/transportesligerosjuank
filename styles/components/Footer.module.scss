@@ -49,19 +49,23 @@
       padding-bottom: 3em;
 
       .imgContainer {
+        display: flex;
+        justify-content: center;
         width: 100%;
-
+        
         img {
           object-fit: cover !important;
-          display: block  ;
+          display: block ;
         }
       }
 
       .footprint {
         display: flex;
-        flex-direction: row;
 
         & div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           width: 3em;
           height: 3em;
           padding: 1em;

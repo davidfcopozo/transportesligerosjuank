@@ -7,7 +7,7 @@ const WhatsAppIcon = () => {
   const iconStyles = {
     width: "2em",
     color: "#ffffff",
-    height: "auto",
+    height: "2em",
   };
   return (
     <a
@@ -16,11 +16,7 @@ const WhatsAppIcon = () => {
       rel="noreferrer"
       className={whatsAppIconStyles.iconContainer}
     >
-      <FontAwesomeIcon
-        className={whatsAppIconStyles.waIcon}
-        style={iconStyles}
-        icon={faWhatsapp}
-      />
+      <FontAwesomeIcon style={iconStyles} icon={faWhatsapp} />
     </a>
   );
 };
