@@ -11,7 +11,7 @@
   height: 100vh;
   z-index: 10000;
   top: 0;
-  
+
   ul {
     display: flex;
     flex-direction: column;
@@ -23,19 +23,20 @@
     margin: 0;
     width: 100%;
     @include font(inherit, $mdSize, $whiteFont);
-    
-    
+
+
     li {
       padding-inline: 1rem;
       padding-block: 1rem;
     }
   }
+
   .nav {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: hsl(227, 86%, 45%, 90%);
-    
+
     position: absolute;
     right: 0;
     bottom: 0;

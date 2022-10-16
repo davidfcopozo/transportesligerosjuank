@@ -9,26 +9,26 @@ import navStyles from "../styles/components/Nav.module.scss";
 import { motion } from "framer-motion";
 
 const Nav = ({ navIsOpen, closeNav }) => {
-  const dropIn = {
+  const slideIn = {
     hidden: {
-      y: "-100vh",
       opacity: 0,
+      x: "100vw",
     },
     visible: {
-      y: "0",
       opacity: 1,
+      x: "0",
       transition: {
-        duration: 2,
+        delay: 0.2,
         type: "spring",
         damping: 25,
         stiffness: 100,
       },
-    },
-    exit: {
-      y: "100vh",
-      opacity: 0,
-      duration: 2,
-      stiffness: 200,
+      exit: {
+        /*  y: "100vh", */
+        opacity: 0,
+        delay: 4,
+        stiffness: 200,
+      },
     },
   };
 
@@ -46,13 +46,12 @@ const Nav = ({ navIsOpen, closeNav }) => {
 
   return (
     <motion.nav
+      variants={slideIn}
       initial="hidden"
+      animate={navIsOpen ? "visible" : "hidden"}
       className={`${navStyles.navContainer} ${
         navIsOpen && navStyles.navActive
       }`}
-      variants={dropIn}
-      animate={navIsOpen ? "visible" : "hidden"}
-      exit="exit"
       id="navDiv"
       onClick={handleNavContainerClick}
     >
