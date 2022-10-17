@@ -27,9 +27,7 @@ const Header = () => {
   useEffect(() => {
     if (data.success) {
       setSuccess(data);
-      console.log("This worked");
     } else {
-      console.log("It didn't work");
       setFail(error);
     }
   }, [data]);
