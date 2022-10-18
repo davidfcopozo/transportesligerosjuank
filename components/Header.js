@@ -17,12 +17,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  let screenIntialValue = typeof window !== "undefined" && window.innerWidth;
+
   const [isOpen, closeModal, openModal] = useModal();
   const [navIsOpen, closeNav, openNav] = useModal();
+  const [isDesktop, closeDesktop, openDesktop] = useModal();
   const [data, error, submitData] = useFetch();
-
   const [success, setSuccess] = useState("");
   const [fail, setFail] = useState("");
+  const [screenSize, setScreenSize] = useState(screenIntialValue);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", () => {
+        setScreenSize(window.innerWidth);
+      });
+    }
+  }, [screenSize]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth > 900) {
+        openDesktop();
+      } else {
+        closeDesktop();
+      }
+    }
+  });
+
+  useEffect(() => {
+    if (screenSize > 900) {
+      openNav();
+    } else {
+      closeNav();
+    }
+  }, [screenSize]);
 
   useEffect(() => {
     if (data.success) {
