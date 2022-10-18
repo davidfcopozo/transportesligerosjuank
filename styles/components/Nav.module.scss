@@ -23,7 +23,20 @@
     margin: 0;
     width: 100%;
     @include font(inherit, $mdSize, $whiteFont);
-
+    
+    @include laptop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      @include font(inherit, $xsSize, $whiteFont);
+      background-color: hsla(227deg, 86%, 45%, 0.9);
+      position: relative;
+      right: unset;
+      bottom: unset;
+      height: unset;
+      width: unset;
+    }
 
     li {
       padding-inline: 1rem;
