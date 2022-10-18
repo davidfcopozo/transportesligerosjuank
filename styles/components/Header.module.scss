@@ -60,9 +60,8 @@
       cursor: pointer;
       text-align: center;
       @include laptop {
-          display: none;
-        }
+        display: none;
+      }
     }
   }
-  
 }

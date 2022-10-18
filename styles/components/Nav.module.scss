@@ -12,6 +12,14 @@
   z-index: 10000;
   top: 0;
 
+  @include laptop {
+      position: fixed;
+      height: 0;
+      top: auto;
+      width: unset;
+      margin-right: -30vw;
+    }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -25,22 +33,22 @@
     @include font(inherit, $mdSize, $whiteFont);
     
     @include laptop {
-      display: flex;
+      position: relative;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      @include font(inherit, $xsSize, $whiteFont);
+      @include font(inherit, $navFont, $whiteFont);
       background-color: hsla(227deg, 86%, 45%, 0.9);
-      position: relative;
-      right: unset;
-      bottom: unset;
       height: unset;
       width: unset;
     }
 
     li {
       padding-inline: 1rem;
-      padding-block: 1rem;
+      
+      @include laptop {
+        padding-block: unset;
+      }
     }
   }
 
@@ -49,13 +57,22 @@
     align-items: center;
     justify-content: center;
     background-color: hsl(227, 86%, 45%, 90%);
-
+    
     position: absolute;
     right: 0;
     bottom: 0;
     height: 100vh;
     width: 80vw;
-
+    
+    @include laptop {
+      justify-content: end;
+      position: relative;
+      height: unset;
+      background-color: transparent;
+      width: 100%;
+      right: unset;
+      bottom: unset;
+    }
   }
 }
 
