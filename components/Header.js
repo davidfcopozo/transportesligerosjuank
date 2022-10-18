@@ -37,7 +37,7 @@ const Header = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      if (window.innerWidth > 900) {
+      if (window.innerWidth >= 900) {
         openDesktop();
       } else {
         closeDesktop();
