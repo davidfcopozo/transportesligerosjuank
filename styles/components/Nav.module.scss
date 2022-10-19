@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.65);
+  /* background-color: rgba(0, 0, 0, 0.65); */
   height: 100vh;
   z-index: 10000;
   top: 0;
@@ -35,8 +35,8 @@
     @include laptop {
       position: relative;
       flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      /* align-items: center;
+      justify-content: center; */
       @include font(inherit, $navFont, $whiteFont);
       background-color: hsla(227deg, 86%, 45%, 0.9);
       height: unset;
@@ -45,9 +45,11 @@
 
     li {
       padding-inline: 1rem;
+      margin-block: 1em;
       
       @include laptop {
         padding-block: unset;
+        margin-block: unset;
       }
     }
   }
