@@ -8,6 +8,16 @@
   width: 100%;
   background-color: $footerBg;
   @include font($franklinGothic, $xsSize, $whiteFont);
+
+  @include laptop {
+      align-items: center;
+      width: 100%;
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid: none;
+  }
   
   & > div {
     display: flex;
@@ -25,12 +35,24 @@
   .contactIcons {
     gap: 2em;
     display: flex;
+
+    @include laptop {
+        flex-direction: column;
+      }
+
+    @include laptop {
+      grid-area: 1 / 3 / 1 / 4;
+    }
     
     div {
       display: flex;
       flex-direction: column;
       gap: 1em;
+      @include laptop {
+        flex-direction: row;
+      }
     }
+    
   }
     hr {
       position: relative;
@@ -38,6 +60,13 @@
       width: 80%;
       opacity: 0.2;
       margin: 0;
+      
+      @include laptop {
+          height: 45vh;
+          grid-area: 1 / 3 /1 / 2;
+          width: auto;
+          margin-inline: 3em;
+        }
     }
 
     .socialFooter {
@@ -53,6 +82,10 @@
         justify-content: center;
         width: 100%;
         
+        @include laptop {
+          min-width: 100%;
+        }
+        
         img {
           object-fit: cover !important;
           display: block ;
@@ -61,6 +94,7 @@
 
       .footprint {
         display: flex;
+
 
         & div {
           display: flex;
