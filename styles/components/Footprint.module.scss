@@ -7,6 +7,13 @@
    color: $lightGrayBg;
    background: $footerBg;
 
+   @include laptop {
+    justify-content: center;
+    width: 100%;
+    grid-row: 2;
+    grid-area: 2 / 1 / 2 / 4;
+   }
+
    p {
      @include font($fugazOne, $xsSize, $whiteFont);
      text-align: center;
