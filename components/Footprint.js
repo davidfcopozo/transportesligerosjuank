@@ -4,6 +4,7 @@ import { faMugHot } from "@fortawesome/free-solid-svg-icons";
 import footprintStyles from "../styles/components/Footprint.module.scss";
 
 const Footprint = () => {
+  const year = new Date().getFullYear();
   return (
     <div className={footprintStyles.footprint} data-testid="footprint">
       <p>
@@ -12,6 +13,12 @@ const Footprint = () => {
           David Francisco
         </a>{" "}
         con <FontAwesomeIcon icon={faMugHot} />
+      </p>
+      <p>
+        <small>
+          &copy;Copyright {year} Juank Transportes Ligeros, todos los derechos
+          reservados
+        </small>{" "}
       </p>
     </div>
   );
