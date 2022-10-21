@@ -2,22 +2,21 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "../components/TextError";
 import yupFormValidation from "../helpers/yupFormValidation";
-import useFetch from "../hooks/useFetch";
 import contactFormStyles from "../styles/components/ContactForm.module.scss";
 import Image from "next/image";
 import contactImage from "../assets/presupuesto.jpg";
+import useFetch from "../hooks/useFetch";
 
 const ContactForm = () => {
-  const { initialValues, validationSchema } = yupFormValidation();
-  const currentDate = new Date().toJSON().slice(0, 10);
-  const [data, error, submitData] = useFetch();
+  const { contactValidationSchema, contactInitialValues } = yupFormValidation();
+  const [formSubmitData] = useFetch();
 
   return (
     <>
       <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={submitData}
+        initialValues={contactInitialValues}
+        validationSchema={contactValidationSchema}
+        onSubmit={formSubmitData}
         validateOnMount
       >
         {(formik) => {
@@ -27,6 +26,7 @@ const ContactForm = () => {
               nombre: true,
               numTel: true,
               correo: true,
+              detalles: true,
             });
           };
           return (
@@ -78,9 +78,7 @@ const ContactForm = () => {
                       placeholder="976 876 876"
                       required
                     />
-                    <ErrorMessage name="numTel">
-                      {(errorMsg) => <div className="error">{errorMsg}</div>}
-                    </ErrorMessage>
+                    <ErrorMessage name="numTel" component={TextError} />
                   </div>
 
                   <div className={contactFormStyles.formControl}>
@@ -104,20 +102,19 @@ const ContactForm = () => {
                   <div className={contactFormStyles.formControl}>
                     <label
                       className={contactFormStyles.inputLabel}
-                      htmlFor="informacion"
+                      htmlFor="comentario"
                     >
                       Comentarios:
                     </label>
                     <Field
                       className={contactFormStyles.inputField}
-                      /* type="correo" */
                       as="textarea"
-                      name="correo"
-                      id="correo"
+                      name="detalles"
+                      id="detalles"
                       placeholder="Información"
                       required
                     />
-                    <ErrorMessage name="correo" component={TextError} />
+                    <ErrorMessage name="detalles" component={TextError} />
                   </div>
 
                   <button
