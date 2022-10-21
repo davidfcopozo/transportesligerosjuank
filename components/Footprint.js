@@ -17,7 +17,7 @@ const Footprint = () => {
       <p>
         <small>
           &copy;Copyright {year} Juank Transportes Ligeros, todos los derechos
-          reservados
+          reservados.
         </small>{" "}
       </p>
     </div>
