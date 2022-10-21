@@ -18,7 +18,6 @@ const Presupuesto = ({ data, error, submitData }) => {
       >
         {(formik) => {
           const clickHandler = () => {
-            console.log(formik);
             formik.setTouched({
               servicio: true,
               nombre: true,
