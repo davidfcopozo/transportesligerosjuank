@@ -1,7 +1,14 @@
 import React from "react";
 
 const TextError = (props) => {
-  return <div className="error">{props.children}</div>;
+  const style = {
+    color: "red",
+  };
+  return (
+    <div style={style} className="error">
+      {props.children}
+    </div>
+  );
 };
 
 export default TextError;
