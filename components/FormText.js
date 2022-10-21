@@ -1,13 +1,31 @@
 import React from "react";
-import contactFormStyles from "../styles/components/ContactForm.module.scss";
+import formTextStyles from "../styles/components/FormText.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const FormText = () => {
   return (
-    <div className={contactFormStyles.cardHeading}>
-      <h2>Formulario de Contacto</h2>
-      <p>
-        Muchas fracias por visitarnos! <br /> ¿Cómo te podemos ayudar?
-      </p>
+    <div className={formTextStyles.cardHeading}>
+      <div>
+        <h2>Hablemos, envíanos un mensaje.</h2>
+      </div>
+
+      <div className={formTextStyles.footprint}>
+        <div>
+          <FontAwesomeIcon icon={faEnvelopesBulk} />
+          {"  "}
+          <a href="emailto:indidseo@gmail.com">example@mail.com</a>
+        </div>
+
+        <div>
+          <FontAwesomeIcon icon={faFacebookF} />
+        </div>
+
+        <div>
+          <FontAwesomeIcon icon={faInstagram} />
+        </div>
+      </div>
     </div>
   );
 };
