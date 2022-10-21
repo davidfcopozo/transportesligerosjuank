@@ -66,7 +66,7 @@ const Header = () => {
       <header className={headerStyles.header}>
         <div>
           <a href="tel:+34664067981">
-            <FontAwesomeIcon icon={faPhone} /> 664 067 981
+            <FontAwesomeIcon icon={faPhone} /> Llámanos: 664 067 981
           </a>
         </div>
 
