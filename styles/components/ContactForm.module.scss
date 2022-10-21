@@ -9,6 +9,7 @@
   width: 100%;
   box-shadow: 0 10px 20px 0 rgba(#999, .25);
   margin-bottom: 2em;
+    
 }
 
 .card {
@@ -27,20 +28,12 @@
       height: 100% !important;
     }
     
-    .cardHeading {
-      width: 100%;
-      text-align: left;
-      @include font(inherit, $xlSize, $lightGrayBg);
-      font-weight: 700;
-      line-height: 1.222;
-    
       p {
         display: block;
         @include font(inherit, $xsSize, $lightGrayBg);
         font-weight: 400;
         margin-top: .50em;
       }
-    }
   }
 
 }
