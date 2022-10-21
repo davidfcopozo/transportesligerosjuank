@@ -12,7 +12,11 @@
   padding: .5rem;
   padding-bottom: 6.7rem;
   z-index: 10000;
+  
+  @include laptop {
+    margin-top: 11vh;
 
+  }
   
   
   .closeBtn {
