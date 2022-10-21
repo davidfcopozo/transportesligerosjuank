@@ -1,11 +1,11 @@
 @use '../abstract/Index.module.scss' as *;
 
 .card {
-  margin: 2rem auto;
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 425px;
+  max-width: 525px;
   background-color: #FFF;
   box-shadow: 0 10px 20px 0 rgba(#999, .25);
   padding: .75rem;
@@ -51,6 +51,11 @@
     position: relative;
     height: fit-content;
     background-color: rgb(255, 255, 255);
+    
+    @include laptop {
+      padding-block: 1em;
+      padding-inline: 3em;
+    }
     
     select:invalid {
       color: $grayFont;
@@ -103,7 +108,7 @@
       input[type="date"]::-webkit-datetime-edit-month-field,
       input[type="date"]::-webkit-datetime-edit-day-field,
       input[type="date"]::-webkit-datetime-edit-year-field, input[type=date]:invalid::-webkit-datetime-edit  {
-      @include font($franklinGothic, $xsSize, $grayFont);
+      @include font($sansSerif, $footprintFont, $grayFont);
       font-weight: 600;    
     }
   
@@ -118,6 +123,10 @@
         border-radius: 6px;
         background-color: $orangeBg;
         border: 0;
+        
+        @include laptop {
+          width: 50%;
+        }
     
         &:focus {
           outline: 0;
