@@ -4,9 +4,11 @@ import {
   faHeadset,
   faHouseChimney,
   faTruckFast,
+  faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import navStyles from "../styles/components/Nav.module.scss";
 import { motion } from "framer-motion";
+import Link from "next/Link";
 
 const Nav = ({ navIsOpen, closeNav }) => {
   const slideIn = {
@@ -57,13 +59,33 @@ const Nav = ({ navIsOpen, closeNav }) => {
     >
       <ul className={`${navStyles.nav}`}>
         <li className="navLi">
-          <FontAwesomeIcon icon={faHouseChimney} /> Inicio
+          <Link href="/">
+            <a>
+              <FontAwesomeIcon icon={faHouseChimney} /> Inicio
+            </a>
+          </Link>
         </li>
         <li className="navLi">
-          <FontAwesomeIcon icon={faTruckFast} /> Servicios
+          <Link href="/#servicios">
+            <a>
+              <FontAwesomeIcon icon={faTruckFast} /> Servicios
+            </a>
+          </Link>
         </li>
         <li className="navLi">
-          <FontAwesomeIcon icon={faHeadset} /> Contacto
+          <Link href="/contacto">
+            <a>
+              <FontAwesomeIcon icon={faHeadset} /> Contacto
+            </a>
+          </Link>
+        </li>
+
+        <li className="navLi">
+          <Link href="/about" as="sobre-nosotros">
+            <a>
+              <FontAwesomeIcon icon={faCircleInfo} /> Sobre Nosotros
+            </a>
+          </Link>
         </li>
       </ul>
     </motion.nav>
