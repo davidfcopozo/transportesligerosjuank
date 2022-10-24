@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
   const mainStyles = {
     display: "flex",
     alignContent: "center",
+    backgroundColor: "#FAFAFA",
   };
 
   return (
