@@ -5,9 +5,11 @@ import yupContactFormValidation from "../helpers/yupContactFormValidation";
 import contactFormStyles from "../styles/components/ContactForm.module.scss";
 import Image from "next/image";
 import contactImage from "../assets/presupuesto.jpg";
+import useFormSubmit from "../hooks/useFormSubmit";
 
-const ContactForm = ({ formSubmitData }) => {
+const ContactForm = () => {
   const { validationSchema, initialValues } = yupContactFormValidation();
+  const [formSubmitData] = useFormSubmit();
 
   return (
     <>
