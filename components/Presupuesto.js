@@ -17,6 +17,7 @@ const Presupuesto = ({ data, error, submitData }) => {
         validateOnMount
       >
         {(formik) => {
+          console.log(formik);
           const clickHandler = () => {
             formik.setTouched({
               servicio: true,
@@ -103,9 +104,7 @@ const Presupuesto = ({ data, error, submitData }) => {
                   placeholder="976 876 876"
                   required
                 />
-                <ErrorMessage name="numTel">
-                  {(errorMsg) => <div className="error">{errorMsg}</div>}
-                </ErrorMessage>
+                <ErrorMessage name="numTel" component={TextError} />
               </div>
 
               <div className={presupuestoStyles.formControl}>
@@ -167,7 +166,7 @@ const Presupuesto = ({ data, error, submitData }) => {
 
               <div className={presupuestoStyles.formControl}>
                 <label className={presupuestoStyles.inputLabel} htmlFor="fecha">
-                  Fecha
+                  Fecha:
                 </label>
 
                 <Field
