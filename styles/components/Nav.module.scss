@@ -24,12 +24,9 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    list-style-type: none;
-    text-decoration: none;
     padding: 0;
     margin: 0;
     width: 100%;
-    @include font(inherit, $mdSize, $whiteFont);
     
     @include laptop {
       position: relative;
@@ -38,6 +35,8 @@
       background-color: hsla(227deg, 86%, 45%, 0.9);
       height: unset;
       width: unset;
+      list-style-type: none;
+      text-decoration: none;
     }
 
     li {
@@ -62,6 +61,16 @@
     bottom: 0;
     height: 100vh;
     width: 80vw;
+
+    a{
+      @include font(inherit, $mdSize, $whiteFont);
+      list-style-type: none;
+      text-decoration: none;
+
+      @include laptop {
+          @include font(inherit, $navFont, $whiteFont);
+        }
+    }
     
     @include laptop {
       justify-content: end;
