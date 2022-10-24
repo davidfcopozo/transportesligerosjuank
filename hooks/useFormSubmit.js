@@ -12,7 +12,7 @@ const useFormSubmit = () => {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        Nombre: values?.nombre,
+        Nombre: values.nombre,
         Telefono: values.numTel,
         Correo: values.correo,
         Detalles: values.detalles,

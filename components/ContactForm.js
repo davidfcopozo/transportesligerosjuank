@@ -1,21 +1,19 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "../components/TextError";
-import yupFormValidation from "../helpers/yupFormValidation";
+import yupContactFormValidation from "../helpers/yupContactFormValidation";
 import contactFormStyles from "../styles/components/ContactForm.module.scss";
 import Image from "next/image";
 import contactImage from "../assets/presupuesto.jpg";
-import useFetch from "../hooks/useFetch";
 
-const ContactForm = () => {
-  const { contactValidationSchema, contactInitialValues } = yupFormValidation();
-  const [formSubmitData] = useFetch();
+const ContactForm = ({ formSubmitData }) => {
+  const { validationSchema, initialValues } = yupContactFormValidation();
 
   return (
     <>
       <Formik
-        initialValues={contactInitialValues}
-        validationSchema={contactValidationSchema}
+        initialValues={initialValues}
+        validationSchema={validationSchema}
         onSubmit={formSubmitData}
         validateOnMount
       >
