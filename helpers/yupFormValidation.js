@@ -12,13 +12,6 @@ const yupFormValidation = () => {
     detalles: "",
   };
 
-  const contactInitialValues = {
-    nombre: "",
-    numTel: "",
-    correo: "",
-    detalles: "",
-  };
-
   const validationSchema = Yup.object({
     servicio: Yup.string().required("Campo requerido"),
     nombre: Yup.string().required("Campo requerido"),
@@ -42,25 +35,10 @@ const yupFormValidation = () => {
     fecha: Yup.date().required(`Por favor seleccione la fecha del servicio`),
     detalles: Yup.string(),
   });
-  const contactValidationSchema = Yup.object({
-    nombre: Yup.string().required("Campo requerido"),
-
-    numTel: Yup.number()
-      .typeError("Este campo solo acepta números.")
-      .min(9, "Número de teléfono imcompleto")
-      .integer()
-      .required("Campo requerido"),
-    correo: Yup.string()
-      .email("Formato del correo electrónico es inválido")
-      .required("Campo requerido"),
-    detalles: Yup.string(),
-  });
 
   return {
     initialValues,
     validationSchema,
-    contactValidationSchema,
-    contactInitialValues,
   };
 };
 
