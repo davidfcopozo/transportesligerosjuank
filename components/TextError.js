@@ -1,13 +1,9 @@
 import React from "react";
+import textErrorStyles from "../styles/components/TextError.module.scss";
 
 const TextError = (props) => {
-  const style = {
-    color: "red",
-  };
   return (
-    <div style={style} className="error">
-      {props.children}
-    </div>
+    <div className={`error ${textErrorStyles.textError}`}>{props.children}</div>
   );
 };
 
