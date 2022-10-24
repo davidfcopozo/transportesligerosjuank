@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import navStyles from "../styles/components/Nav.module.scss";
 import { motion } from "framer-motion";
-import Link from "next/Link";
+import Link from "next/link";
 
 const Nav = ({ navIsOpen, closeNav }) => {
   const slideIn = {
@@ -36,10 +36,11 @@ const Nav = ({ navIsOpen, closeNav }) => {
 
   const handleNavContainerClick = (e) => {
     const navContainer = document.getElementById("navDiv");
-    const navLi = document.querySelector(".navLi").classList;
+    const navLi = document.querySelector("navLi");
 
     navContainer.addEventListener("click", (e) => {
-      if (e.target === navContainer || e.target.className === navLi) {
+      console.log(e.target);
+      if (e.target === navContainer || e.target.classList.contains("navLi")) {
         e.stopPropagation();
         closeNav();
       }
@@ -58,31 +59,31 @@ const Nav = ({ navIsOpen, closeNav }) => {
       onClick={handleNavContainerClick}
     >
       <ul className={`${navStyles.nav}`}>
-        <li className="navLi">
+        <li>
           <Link href="/">
-            <a>
+            <a className="navLi">
               <FontAwesomeIcon icon={faHouseChimney} /> Inicio
             </a>
           </Link>
         </li>
-        <li className="navLi">
+        <li>
           <Link href="/#servicios">
-            <a>
+            <a className="navLi">
               <FontAwesomeIcon icon={faTruckFast} /> Servicios
             </a>
           </Link>
         </li>
-        <li className="navLi">
+        <li>
           <Link href="/contacto">
-            <a>
+            <a className="navLi">
               <FontAwesomeIcon icon={faHeadset} /> Contacto
             </a>
           </Link>
         </li>
 
-        <li className="navLi">
+        <li>
           <Link href="/nosotros">
-            <a>
+            <a className="navLi">
               <FontAwesomeIcon icon={faChalkboardUser} /> Nosotros
             </a>
           </Link>
