@@ -1,42 +1,39 @@
 @use '../abstract/Index.module.scss' as *;
 
+.formContainer {
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 10vh;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 10px 20px 0 rgba(#999, .25);
+  margin-bottom: 2em;
+    
+}
+
 .card {
-  margin: 1em auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 525px;
+  width: 40%;
   background-color: #FFF;
-  box-shadow: 0 10px 20px 0 rgba(#999, .25);
-  padding: .75rem;
-
+  height: 100%;
+  
   .cardImage {
-    border-radius: 8px;
-    overflow: hidden;
-    padding-bottom: 65%;
-    background-image: url('../../assets/presupuesto.jpg');
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 0 55%;
-    box-shadow: inset 190px 1px 75px rgba(0, 0, 0, 0.68);
-    position: relative;
+    display: grid;
+    height: 100%;
     
-    .cardHeading {
-      position: absolute;
-      left: 10%;
-      top: 15%;
-      right: 10%;
-      @include font(inherit, $xlSize, $lightGrayBg);
-      font-weight: 700;
-      line-height: 1.222;
+    img {
+      box-shadow: inset 190px 1px 75px rgba(0, 0, 0, 0.68);
+      height: 100% !important;
+    }
     
-      small {
+      p {
         display: block;
         @include font(inherit, $xsSize, $lightGrayBg);
         font-weight: 400;
         margin-top: .50em;
       }
-    }
   }
 
 }
@@ -45,17 +42,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 60%;
     font-family: $franklinGothic;
     border-radius: 10px;
     position: relative;
     height: fit-content;
     background-color: rgb(255, 255, 255);
-    
-    @include laptop {
-      padding-block: 1em;
-      padding-inline: 3em;
-    }
     
     select:invalid {
       color: $grayFont;
@@ -79,7 +71,7 @@
     }
   
     .inputLabel {
-      @include font(inherit, $mdSize, $darkBlueFont);
+      @include font(inherit, $xsSize, $darkBlueFont);
       transition: .25s ease;
 
     }
@@ -89,7 +81,7 @@
       z-index: 1;
       background-color: transparent;
       border-bottom: 2px solid #eee;
-      @include font(inherit, $mdSize, inherit);
+      @include font(inherit, $xsSize, inherit);
       padding: .80rem 0;
       
       & * {
@@ -118,15 +110,11 @@
         position: relative;
         @include font(inherit, $mdSize, $whiteFont);
         padding: 1rem;
-        width: 90%;
+        width: 50%;
         font-weight: 500;
         border-radius: 6px;
         background-color: $orangeBg;
         border: 0;
-        
-        @include laptop {
-          width: 50%;
-        }
     
         &:focus {
           outline: 0;
@@ -136,7 +124,7 @@
       padding: 1rem 1rem;
       text-align: center;
     
-      @include font(inherit, $xsSize, #8597a3);
+      @include font(inherit, $footprintFont, #8597a3);
   
       a {
         display: block;
@@ -145,6 +133,6 @@
       }
     }
   }
-/* } */
+
 
 

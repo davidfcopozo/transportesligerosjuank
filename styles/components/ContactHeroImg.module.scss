@@ -14,11 +14,10 @@
     background-size: 150%;
     background-position: 0 55%;
     
- /*    img {
-      height: 40vh;
-      width: 100vw;
-      object-fit: cover;
-    } */
+    @include laptop {
+      height: 50vh;
+
+    }
   }
   
 }
@@ -37,7 +36,7 @@
     @include button(10em,
       $orangeBg,
       $whiteFont,
-      $xsSize);
+      $navFont);
       margin-top: 1rem;
       margin-inline: 0;
   }

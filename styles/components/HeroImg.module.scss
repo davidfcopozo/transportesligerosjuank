@@ -6,6 +6,18 @@
   margin-top: 4em;
   margin-bottom: 1em;
   
+  @include customBreakpoint(1024px) {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 4.5em;
+  }
+  
+  @include large {
+    width: 80%;
+
+  }
+  
+  
   .heroImgContainer {
     width: 100%;
     
@@ -13,6 +25,11 @@
       height: 40vh;
       width: 100vw;
       object-fit: cover;
+      
+      @include tablet {
+        height: 50vh;
+
+      }
     }
   }
   
@@ -27,7 +44,7 @@
   transform: translate(-50%, -50%);
 
   button {
-    @include button(10em,
+    @include button(8em,
       $blueBg,
       $whiteFont,
       $xsSize);

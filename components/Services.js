@@ -9,7 +9,7 @@ import retiradaEscombros from "../assets/retirada-escombros.jpg";
 
 const Services = () => {
   return (
-    <section className={servicesStyles.serviceSection}>
+    <section id="servicios" className={servicesStyles.serviceSection}>
       <h1 className={servicesStyles.title}>Nuestros Servicios</h1>
 
       <div className={servicesStyles.cardWrapper}>

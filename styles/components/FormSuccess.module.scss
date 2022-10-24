@@ -14,20 +14,34 @@
   padding: .5rem;
   padding-bottom: 6.7rem;
   z-index: 10000;
+  overflow-x: hidden;
 
   .messageBox {
     display: flex;
-    height: 50vh;
+    width: 90%;
+    max-width: 425px;
     flex-direction: column;
     background-color: $whiteFont;
     align-items: center;
     border-radius: 10px;
-    padding: 35.5rem;
-    width: 90%;
-    max-width: 425px;
     box-shadow: 0 10px 20px 0 rgba(#999, .25);
     padding: .75rem;
     @include font($fugazOne, $mdSize, $darkBlueFont);
+    
+    @include tablet {
+      margin-top: 2em;
+    }
+    @include laptop {
+      max-width: 625px;
+      max-height: 70vh;
+      padding-top: unset;
+      padding-bottom: 1em;
+    }
+
+    h2 {
+      @include font(inherit, $mdSize, $darkBlueFont);
+
+    }
     
     p {
       padding-block: 1em;
@@ -36,7 +50,7 @@
     }
     button {
       border-radius: 10px;
-      @include button(fit-content, inherit, $whiteFont, $mdSize);
+      @include button(fit-content, inherit, $whiteFont, $xsSize);
       border: none;
       padding: .3rem .8rem;
     }
@@ -45,19 +59,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 40%;
-      text-align: center;
+      width: 60%;
       
-      /* Styles for Next Js Image component */
-     /*  .image {
-        position: relative !important;
-        top: 0 !important;
-        bottom: 0 !important;
-        min-height: unset !important;
-        min-width: unset !important;
-        width: 100% !important;
-        height: 100% !important;
-      } */
+      @include laptop {
+          width: 40%;
+        }
     }
   }
 }

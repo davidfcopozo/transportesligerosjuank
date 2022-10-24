@@ -8,6 +8,11 @@
   padding-left: .2em;
   margin-inline: auto;
   
+  @include large {
+    width: 80%;
+
+  }
+  
   .cardWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +23,7 @@
     }
   
   .title {
-    @include font($fugazOne, $xlSize, $darkBlueFont );
+    @include font($fugazOne, $mdSize, $darkBlueFont );
     border-left: .2em solid $orangeBg;
     padding-left: .2em;
     margin-bottom: 1em;

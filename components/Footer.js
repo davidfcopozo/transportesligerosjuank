@@ -7,7 +7,7 @@ import {
   faLocationCrosshairs,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import logoIcon from "../assets/juank-truck.svg";
+import logoIcon from "../assets/juank.svg";
 import Image from "next/image";
 import Footprint from "./Footprint";
 

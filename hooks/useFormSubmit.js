@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const useFetch = () => {
+const useFormSubmit = () => {
   const [data, setData] = useState("");
   const [error, setError] = useState("");
 
-  const submitData = (values, onSubmitProps) => {
+  const formSubmitData = (values, onSubmitProps) => {
     fetch("https://formsubmit.co/ajax/indidseo@gmail.com", {
       method: "POST",
       headers: {
@@ -12,13 +12,9 @@ const useFetch = () => {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        Servicio: values.servicio,
         Nombre: values.nombre,
         Telefono: values.numTel,
         Correo: values.correo,
-        Desde: values.desde,
-        Hasta: values.hasta,
-        Fecha: values.fecha,
         Detalles: values.detalles,
       }),
     })
@@ -35,7 +31,7 @@ const useFetch = () => {
       });
   };
 
-  return [data, error, submitData];
+  return [data, error, formSubmitData];
 };
 
-export default useFetch;
+export default useFormSubmit;

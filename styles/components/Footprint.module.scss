@@ -1,18 +1,33 @@
  @use '../abstract/Index.module.scss' as *;
  
  .footprint {
-   max-width: 100%;
-   padding: 1em;
-   border-top: 0.1em solid rgb(231, 232, 234, 0.25);
+   width: 100%;
+   padding-top: 1em;
+   border-top: 1px solid rgb(231, 232, 234, 0.25);
    color: $lightGrayBg;
    background: $footerBg;
 
-   p {
-     @include font($fugazOne, $xsSize, $whiteFont);
-     text-align: center;
+   @include laptop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    grid-row: 2;
+    grid-area: 2 / 1 / 2 / 4;
 
+    p:nth-of-type(2) {
+      margin-top: 2em;
+      @include font($sansSerif, $footprintFont, $whiteFont);
+
+    }
+   }
+
+   p {
+     @include font($fugazOne, $footprintFont, $whiteFont);
+     text-align: center;
+     
      a {
-       color: $orangeBg;
+       @include font($fugazOne, $footprintFont, $orangeBg);
      }
    }
  }
