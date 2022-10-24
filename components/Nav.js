@@ -4,7 +4,7 @@ import {
   faHeadset,
   faHouseChimney,
   faTruckFast,
-  faCircleInfo,
+  faChalkboardUser,
 } from "@fortawesome/free-solid-svg-icons";
 import navStyles from "../styles/components/Nav.module.scss";
 import { motion } from "framer-motion";
@@ -81,9 +81,9 @@ const Nav = ({ navIsOpen, closeNav }) => {
         </li>
 
         <li className="navLi">
-          <Link href="/about" as="sobre-nosotros">
+          <Link href="/nosotros">
             <a>
-              <FontAwesomeIcon icon={faCircleInfo} /> Sobre Nosotros
+              <FontAwesomeIcon icon={faChalkboardUser} /> Nosotros
             </a>
           </Link>
         </li>
