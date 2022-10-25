@@ -7,16 +7,17 @@
   margin-bottom: 1em;
   
   .heroImgContainer {
-    width: 100%;
+    display: grid;
+    height: 30vh;
+
+    @include tablet {
+      height: 60vh;
+    }
     
     img {
-      height: 40vh;
       width: 100vw;
       object-fit: cover;
       
-      @include tablet {
-        height: 60vh;
-      }
     }
   }
   
