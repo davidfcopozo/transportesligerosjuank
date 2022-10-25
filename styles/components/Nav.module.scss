@@ -12,12 +12,21 @@
   top: 0;
 
   @include laptop {
-      position: fixed;
+      position: absolute;
       height: 0;
-      top: auto;
+      top: 9vh;
       width: unset;
-      margin-right: -30vw;
+      margin-right: -15vw;
+      display: inherit !important;
     }
+
+  @include customBreakpoint(1000px) {
+    margin-right: -25vw;
+  }
+
+  @include large {
+    margin-right: -30vw;
+  }
 
   ul {
     display: flex;
