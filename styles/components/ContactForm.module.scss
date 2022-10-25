@@ -52,15 +52,6 @@
     select:invalid {
       color: $grayFont;
     }
-    
-      input[type="date"]:valid::-webkit-datetime-edit {
-        color: #000000;
-      }
-  
-      h3 {
-        color: $darkBlueFont;
-        margin-left: .8rem;
-      }
   
     .formControl {
       display: flex;
@@ -73,7 +64,6 @@
     .inputLabel {
       @include font(inherit, $xsSize, $darkBlueFont);
       transition: .25s ease;
-
     }
   
     .inputField {
@@ -81,8 +71,12 @@
       z-index: 1;
       background-color: transparent;
       border-bottom: 2px solid #eee;
-      @include font(inherit, $xsSize, inherit);
+      @include font(inherit, $footprintFont, $darkGrayFont);
       padding: .80rem 0;
+
+      @include laptop {
+        font-size: $navFont;
+      }
       
       & * {
         @include font(inherit, $xsSize, inherit);
