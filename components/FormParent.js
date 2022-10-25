@@ -1,9 +1,10 @@
 import React from "react";
+import useFormSubmit from "../hooks/useFormSubmit";
 import ContactForm from "./ContactForm";
 import FormText from "./FormText";
-import Presupuesto from "./Presupuesto";
 
 const FormParent = () => {
+  const [formSubmitData] = useFormSubmit();
   const styles = {
     marginInline: "auto",
     width: "80%",
@@ -16,7 +17,7 @@ const FormParent = () => {
   return (
     <div style={styles}>
       <FormText />
-      <ContactForm />
+      <ContactForm formSubmitData={formSubmitData} />
     </div>
   );
 };
