@@ -14,18 +14,19 @@
   @include laptop {
       position: absolute;
       height: 0;
-      top: 9vh;
+      top: 65%;
       width: unset;
       margin-right: -15vw;
       display: inherit !important;
     }
-
-  @include customBreakpoint(1000px) {
-    margin-right: -25vw;
-  }
-
-  @include large {
-    margin-right: -30vw;
+    
+    @include customBreakpoint(1000px) {
+      margin-right: -25vw;
+    }
+    
+    @include large {
+      margin-right: -30vw;
+      /* top: 65%; */
   }
 
   ul {
