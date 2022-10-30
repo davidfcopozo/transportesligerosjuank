@@ -17,7 +17,6 @@ const Presupuesto = ({ data, error, submitData }) => {
         validateOnMount
       >
         {(formik) => {
-          console.log(formik);
           const clickHandler = () => {
             formik.setTouched({
               servicio: true,
