@@ -1,31 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "../components/TextError";
-import yupContactFormValidation from "../helpers/yupContactFormValidation";
 import contactFormStyles from "../styles/components/ContactForm.module.scss";
 import Image from "next/image";
-
 import contactImage from "../assets/presupuesto.jpg";
+import yupContactFormValidation from "../helpers/yupContactFormValidation";
 
-const ContactForm = ({ formSubmitData }) => {
-  const { validationSchema, initialValues } = yupContactFormValidation();
+const ContactForm = () => {
+  const { contactFormInitialValues, contactFormValidationSchema } =
+    yupContactFormValidation();
+
+  const [data, setData] = useState("");
+  const [error, setError] = useState("");
+
+  async function submitForm(values, onSubmitProps) {
+    await fetch("https://formsubmit.co/ajax/indidseo@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        Nombre: values.name,
+        Telefono: values.cel,
+        Correo: values.email,
+        Detalles: values.details,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        onSubmitProps.setSubmitting(false);
+        onSubmitProps.resetForm();
+        setData(data);
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(error);
+      });
+  }
 
   return (
     <>
       <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={formSubmitData}
+        initialValues={contactFormInitialValues}
+        validationSchema={contactFormValidationSchema}
         validateOnMount
+        key={458451151251220}
+        onSubmit={submitForm}
       >
         {(formik) => {
           const clickHandler = () => {
-            console.log(formik);
             formik.setTouched({
-              nombre: true,
-              numTel: true,
-              correo: true,
-              detalles: true,
+              name: true,
+              cel: true,
+              email: true,
+              details: true,
             });
           };
           return (
@@ -46,73 +75,70 @@ const ContactForm = ({ formSubmitData }) => {
                 <div className={contactFormStyles.formControl}>
                   <label
                     className={contactFormStyles.inputLabel}
-                    htmlFor="nombre"
+                    htmlFor="name"
                   >
                     Nombre:
                   </label>
                   <Field
                     className={contactFormStyles.inputField}
                     type="text"
-                    name="nombre"
-                    id="nombre"
+                    name="name"
+                    id="name"
                     placeholder="Francisco García"
                     required
                   />
-                  <ErrorMessage name="nombre" component={TextError} />
+                  <ErrorMessage name="name" component={TextError} />
                 </div>
 
                 <div className={contactFormStyles.formControl}>
-                  <label
-                    className={contactFormStyles.inputLabel}
-                    htmlFor="numTel"
-                  >
+                  <label className={contactFormStyles.inputLabel} htmlFor="cel">
                     Número de telefónico:
                   </label>
                   <Field
                     className={contactFormStyles.inputField}
                     type="tel"
-                    name="numTel"
-                    id="numTel"
+                    name="cel"
+                    id="cel"
                     placeholder="976 876 876"
                     required
                   />
-                  <ErrorMessage name="numTel" component={TextError} />
+                  <ErrorMessage name="cel" component={TextError} />
                 </div>
 
                 <div className={contactFormStyles.formControl}>
                   <label
                     className={contactFormStyles.inputLabel}
-                    htmlFor="correo"
+                    htmlFor="email"
                   >
                     Correo Electrónico:
                   </label>
                   <Field
                     className={contactFormStyles.inputField}
                     type="correo"
-                    name="correo"
-                    id="correo"
+                    name="email"
+                    id="email"
                     placeholder="micorreo@ejemplo.es"
                     required
                   />
-                  <ErrorMessage name="correo" component={TextError} />
+                  <ErrorMessage name="email" component={TextError} />
                 </div>
 
                 <div className={contactFormStyles.formControl}>
                   <label
                     className={contactFormStyles.inputLabel}
-                    htmlFor="detalles"
+                    htmlFor="details"
                   >
                     Comentarios:
                   </label>
                   <Field
                     className={contactFormStyles.inputField}
                     as="textarea"
-                    name="detalles"
-                    id="detalles"
+                    name="details"
+                    id="details"
                     placeholder="Información"
                     required
                   />
-                  <ErrorMessage name="detalles" component={TextError} />
+                  <ErrorMessage name="details" component={TextError} />
                 </div>
 
                 <button
