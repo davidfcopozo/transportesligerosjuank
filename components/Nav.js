@@ -25,11 +25,6 @@ const Nav = ({ navIsOpen, closeNav }) => {
         damping: 25,
         stiffness: 100,
       },
-      exit: {
-        opacity: 0,
-        delay: 4,
-        stiffness: 200,
-      },
     },
   };
 
