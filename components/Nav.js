@@ -26,7 +26,6 @@ const Nav = ({ navIsOpen, closeNav }) => {
         stiffness: 100,
       },
       exit: {
-        /*  y: "100vh", */
         opacity: 0,
         delay: 4,
         stiffness: 200,
