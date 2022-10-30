@@ -9,21 +9,26 @@ function MyApp({ Component, pageProps, router }) {
   const pageTransition = {
     pageInitial: {
       opacity: 0,
-      x: 100,
     },
     pageAnimate: {
       opacity: 1,
-      x: 0,
-      duration: 3,
+
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
     },
     pageExit: {
       opacity: 0,
-      x: 100,
-      duration: 3,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
     },
   };
+
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <motion.div
         variants={pageTransition}
         key={router.route}
