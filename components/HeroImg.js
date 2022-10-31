@@ -4,7 +4,8 @@ import heroImgStyles from "../styles/components/HeroImg.module.scss";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import Router, { useRouter } from "next/router";
+
+const ref = React.createRef();
 
 const HeroImg = ({ img, imgAlt, title, btnValue }) => {
   const { scrollYProgress } = useScroll();
@@ -25,13 +26,8 @@ const HeroImg = ({ img, imgAlt, title, btnValue }) => {
       </div>
       <div className={heroImgStyles.heroText} style={{ y }}>
         <h1>{title}</h1>
-        <Link href="/contacto">
-          <Button
-            value={btnValue}
-            clickHandler={() => {
-              Router.push("/contacto");
-            }}
-          />
+        <Link href="/contacto" passHref legacyBehavior>
+          <Button ref={ref} value={btnValue} />
         </Link>
       </div>
     </motion.div>
