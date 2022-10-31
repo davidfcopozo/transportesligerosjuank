@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useSuccessContext } from "../components/context/FormSuccessContext";
 
 const useFetch = () => {
   const [data, setData] = useState("");
   const [error, setError] = useState("");
+
+  const { setSuccess, setFail } = useSuccessContext();
 
   const submitData = (values, onSubmitProps) => {
     fetch("https://formsubmit.co/ajax/indidseo@gmail.com", {
@@ -28,10 +31,12 @@ const useFetch = () => {
         onSubmitProps.setSubmitting(false);
         onSubmitProps.resetForm();
         setData(data);
+        setSuccess(data);
       })
       .catch((error) => {
         console.log(error);
         setError(error);
+        setFail(error);
       });
   };
 
