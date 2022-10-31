@@ -5,6 +5,7 @@
       text-align: left;
       font-weight: 700;
       line-height: 1.222;
+      margin-top: 15vh;
       
       & h2 {
         @include font(inherit, $xlSize, $darkBlueFont);
