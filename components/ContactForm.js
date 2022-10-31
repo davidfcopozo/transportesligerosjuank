@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "../components/TextError";
 import contactFormStyles from "../styles/components/ContactForm.module.scss";
@@ -6,38 +6,9 @@ import Image from "next/image";
 import contactImage from "../assets/presupuesto.jpg";
 import yupContactFormValidation from "../helpers/yupContactFormValidation";
 
-const ContactForm = () => {
+const ContactForm = ({ submitForm }) => {
   const { contactFormInitialValues, contactFormValidationSchema } =
     yupContactFormValidation();
-
-  const [data, setData] = useState("");
-  const [error, setError] = useState("");
-
-  async function submitForm(values, onSubmitProps) {
-    await fetch("https://formsubmit.co/ajax/indidseo@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        Nombre: values.name,
-        Telefono: values.cel,
-        Correo: values.email,
-        Detalles: values.details,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        onSubmitProps.setSubmitting(false);
-        onSubmitProps.resetForm();
-        setData(data);
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error);
-      });
-  }
 
   return (
     <>
