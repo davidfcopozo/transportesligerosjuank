@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSuccessContext } from "../components/context/FormSuccessContext";
+import { useSuccessContext } from "../context/FormSuccessContext";
 
 const useFetch = () => {
   const [data, setData] = useState("");
