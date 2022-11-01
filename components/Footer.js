@@ -13,43 +13,45 @@ import Footprint from "./Footprint";
 
 const Footer = () => {
   return (
-    <footer className={footerStyles.footer}>
-      <div className={footerStyles.contactIcons}>
-        <div>
-          <FontAwesomeIcon icon={faPhone} />
-          <a href="tel:+34664067981">664 067 981</a>
-        </div>
+    <>
+      <footer className={footerStyles.footer}>
+        <div className={footerStyles.contactIcons}>
+          <div>
+            <FontAwesomeIcon icon={faPhone} />
+            <a href="tel:+34664067981">664 067 981</a>
+          </div>
 
-        <div>
-          <FontAwesomeIcon icon={faEnvelopesBulk} />
-          <a href="emailto:indidseo@gmail.com">example@mail.com</a>
-        </div>
+          <div>
+            <FontAwesomeIcon icon={faEnvelopesBulk} />
+            <a href="emailto:indidseo@gmail.com">example@mail.com</a>
+          </div>
 
-        {/* <div>
+          {/* <div>
           <FontAwesomeIcon icon={faLocationCrosshairs} />
           <a href="emailto:indidseo@gmail.com">example@mail.com</a>
         </div> */}
-      </div>
-
-      <hr />
-
-      <div className={footerStyles.socialFooter}>
-        <div className={footerStyles.imgContainer}>
-          <Image src={logoIcon.src} width="100%" height="100%" />
         </div>
 
-        <div className={footerStyles.footprint}>
-          <div>
-            <FontAwesomeIcon icon={faFacebookF} />
+        <hr />
+
+        <div className={footerStyles.socialFooter}>
+          <div className={footerStyles.imgContainer}>
+            <Image src={logoIcon.src} width="100%" height="100%" />
           </div>
 
-          <div>
-            <FontAwesomeIcon icon={faInstagram} />
+          <div className={footerStyles.footprint}>
+            <div>
+              <FontAwesomeIcon icon={faFacebookF} />
+            </div>
+
+            <div>
+              <FontAwesomeIcon icon={faInstagram} />
+            </div>
           </div>
         </div>
-      </div>
+      </footer>
       <Footprint />
-    </footer>
+    </>
   );
 };
 
