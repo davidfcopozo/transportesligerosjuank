@@ -64,12 +64,14 @@ const Header = () => {
 
         <div>
           <Link href="/">
-            <Image
-              src={logo}
-              width={120}
-              height={120}
-              alt="Transportes ligeros Juank"
-            />
+            <a>
+              <Image
+                src={logo}
+                width={120}
+                height={120}
+                alt="Transportes ligeros Juank"
+              />
+            </a>
           </Link>
 
           <div>
