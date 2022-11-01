@@ -6,6 +6,7 @@
       font-weight: 700;
       line-height: 1.222;
       margin-top: 15vh;
+      margin-bottom: 1em;
       
       & h2 {
         @include font(inherit, $xlSize, $darkBlueFont);
@@ -19,16 +20,15 @@
         gap: 1em;
         margin-top: 1em;
 
-        div:first-of-type {
+        /* div:first-of-type {
           a {
             text-decoration: none;
             list-style: none;
             @include font(inherit, $navFont, #000000);
           }
-        }
+        } */
 
-        div:nth-of-type(2), 
-        div:nth-of-type(3) {
+        div {
           display: flex;
           justify-content: center;
           align-items: center;
