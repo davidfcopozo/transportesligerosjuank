@@ -1,8 +1,8 @@
 import HeroImg from "../components/HeroImg";
 import ContactHeroImg from "../components/ContactHeroImg";
 import Services from "../components/Services";
-import heroImg from "../assets/heroImg.jpg";
-import contactHeroImg from "../assets/chico-furgoneta.jpg";
+import heroImg from "../assets/chico-furgoneta.jpg";
+import contactHeroImg from "../assets/heroImg.jpg";
 import { motion } from "framer-motion";
 
 export default function Home() {
