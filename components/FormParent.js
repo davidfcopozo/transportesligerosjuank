@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ContactForm from "./ContactForm";
-import { useSuccessContext } from "./context/FormSuccessContext";
+import { useSuccessContext } from "../context/FormSuccessContext";
 import FormText from "./FormText";
 
 const FormParent = () => {
