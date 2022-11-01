@@ -15,7 +15,7 @@ import useFetch from "../hooks/useFetch";
 import FormSuccess from "./FormSuccess";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
-import { useSuccessContext } from "./context/FormSuccessContext";
+import { useSuccessContext } from "../context/FormSuccessContext";
 
 const Header = () => {
   let screenIntialValue = typeof window !== "undefined" && window.innerWidth;
