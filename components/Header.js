@@ -91,7 +91,7 @@ const Header = () => {
                   style={{ width: "2em", height: "fit-content" }}
                 />
               }
-              clickHandler={openNav}
+              onClick={openNav}
             />
           </div>
         </div>
