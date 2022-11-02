@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import formSuccessStyles from "../styles/components/FormSuccess.module.scss";
 import { motion } from "framer-motion";
 import xMark from "../assets/xMark.svg";
-import checkMark from "../assets/checkMark.svg";
+import checkMark from "../assets/checkmark.svg";
 import Image from "next/image";
 
 const FormSuccess = ({ success, fail }) => {
