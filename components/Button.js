@@ -15,5 +15,5 @@ const Button = React.forwardRef(({ onClick, href, ...props }, ref) => {
     </motion.button>
   );
 });
-
+Button.displayName = "Button";
 export default Button;

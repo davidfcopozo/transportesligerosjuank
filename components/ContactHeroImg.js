@@ -15,6 +15,7 @@ const ContactHeroImg = ({ img, imgAlt, title, btnValue }) => {
           objectFit="cover"
           objectPosition="center"
           src={heroImg.src}
+          alt="Persona embalando una caja"
         />
       </div>
       <div className={contactHeroImgStyles.heroText}>

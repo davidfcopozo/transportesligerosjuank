@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import presupuestoStyles from "../styles/components/Presupuesto.module.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 const Presupuesto = ({ submitData }) => {
   const { initialValues, validationSchema } = yupFormValidation();
   const currentDate = new Date().toJSON().slice(0, 10);
-  const [btnColor, setBtnColor] = useState("#F04E1B");
 
   return (
     <>
@@ -30,14 +29,6 @@ const Presupuesto = ({ submitData }) => {
               fecha: true,
             });
           };
-
-          useEffect(() => {
-            setBtnColor(
-              !formik.isValid || formik.isSubmitting
-                ? "gray !important"
-                : "#F04E1B !important"
-            );
-          }, [formik]);
 
           return (
             <Form className={presupuestoStyles.form}>
@@ -214,7 +205,8 @@ const Presupuesto = ({ submitData }) => {
                 whileTap={{ scale: 1.1 }}
                 disabled={!formik.isValid || formik.isSubmitting ? true : false}
                 style={{
-                  backgroundColor: `${btnColor}`,
+                  backgroundColor:
+                    !formik.isValid || (formik.isSubmitting && "gray"),
                 }}
               >
                 Enviar

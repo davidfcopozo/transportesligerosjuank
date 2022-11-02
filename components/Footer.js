@@ -36,7 +36,7 @@ const Footer = () => {
 
         <div className={footerStyles.socialFooter}>
           <div className={footerStyles.imgContainer}>
-            <Image src={logoIcon.src} width="100%" height="100%" />
+            <Image src={logoIcon.src} width="100%" height="100%" alt="Logo de JuanK transportes ligeros"/>
           </div>
 
           <div className={footerStyles.footprint}>

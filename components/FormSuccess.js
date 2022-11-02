@@ -14,7 +14,7 @@ const FormSuccess = ({ success, fail }) => {
     if (success || fail) {
       setFormSubmitted(true);
     }
-  }, [success]);
+  }, [open]);
 
   const dropIn = {
     hidden: {

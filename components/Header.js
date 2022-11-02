@@ -51,7 +51,7 @@ const Header = () => {
     } else {
       closeNav();
     }
-  }, [screenSize]);
+  }, [screenIntialValue]);
 
   return (
     <>
