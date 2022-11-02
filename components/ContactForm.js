@@ -9,7 +9,6 @@ import yupContactFormValidation from "../helpers/yupContactFormValidation";
 const ContactForm = ({ submitForm }) => {
   const { contactFormInitialValues, contactFormValidationSchema } =
     yupContactFormValidation();
-  const [btnColor, setBtnColor] = useState("#F04E1B");
 
   return (
     <>
