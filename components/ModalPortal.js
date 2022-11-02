@@ -40,7 +40,7 @@ const ModalPortal = ({ children, isOpen, closeModal, data, error }) => {
     if (data.success || error) {
       closeModal();
     }
-  }, [isOpen]);
+  }, [data]);
 
   return (
     <motion.div
