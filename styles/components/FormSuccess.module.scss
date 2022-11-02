@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  margin-top: 10vh;
+  margin-top: 8vh;
   background-color: rgba(0, 0, 0, 0.75);
   height: 100vh;
   overflow-y: auto;
@@ -15,6 +15,11 @@
   padding-bottom: 6.7rem;
   z-index: 10000;
   overflow-x: hidden;
+  
+  @include laptop {
+    margin-top: 10vh;
+
+  }
 
   .messageBox {
     display: flex;
@@ -56,13 +61,18 @@
     }
 
     .imgContainer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60%;
+      display: grid;
+      height: 100%;      
+
+      img {
+          height: 50% !important;
+        }
       
+      @include mobile {
+          width: 30%;
+        }
       @include laptop {
-          width: 40%;
+          width: 30%;
         }
     }
   }
