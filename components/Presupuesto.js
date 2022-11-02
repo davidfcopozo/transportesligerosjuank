@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import presupuestoStyles from "../styles/components/Presupuesto.module.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
 import yupFormValidation from "../helpers/yupFormValidation";
+import { motion } from "framer-motion";
 
-const Presupuesto = ({ data, error, submitData }) => {
+const Presupuesto = ({ submitData }) => {
   const { initialValues, validationSchema } = yupFormValidation();
   const currentDate = new Date().toJSON().slice(0, 10);
+  const [btnColor, setBtnColor] = useState("#F04E1B");
 
   return (
     <>
@@ -17,7 +19,6 @@ const Presupuesto = ({ data, error, submitData }) => {
         validateOnMount
       >
         {(formik) => {
-          console.log(formik);
           const clickHandler = () => {
             formik.setTouched({
               servicio: true,
@@ -29,6 +30,15 @@ const Presupuesto = ({ data, error, submitData }) => {
               fecha: true,
             });
           };
+
+          useEffect(() => {
+            setBtnColor(
+              !formik.isValid || formik.isSubmitting
+                ? "gray !important"
+                : "#F04E1B !important"
+            );
+          }, [formik]);
+
           return (
             <Form className={presupuestoStyles.form}>
               <div className={presupuestoStyles.card}>
@@ -196,18 +206,19 @@ const Presupuesto = ({ data, error, submitData }) => {
                 />
               </div>
 
-              <button
+              <motion.button
                 className={presupuestoStyles.actionBtn}
                 type="submit"
                 onClick={clickHandler}
+                whileHover={{ scale: 0.9 }}
+                whileTap={{ scale: 1.1 }}
                 disabled={!formik.isValid || formik.isSubmitting ? true : false}
                 style={{
-                  backgroundColor:
-                    !formik.isValid || (formik.isSubmitting && "gray"),
+                  backgroundColor: `${btnColor}`,
                 }}
               >
                 Enviar
-              </button>
+              </motion.button>
 
               <div className={presupuestoStyles.terms}>
                 <p>

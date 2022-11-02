@@ -35,6 +35,7 @@ const Services = () => {
           img={retiradaEscombros.src}
           title="Retirada de Escombros"
           paragraph="Retiramos los escombros de tus obras de manera rápida y eficaz."
+          priority
         />
 
         <ServiceCard

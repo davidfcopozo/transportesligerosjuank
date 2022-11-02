@@ -15,6 +15,7 @@ import useFetch from "../hooks/useFetch";
 import FormSuccess from "./FormSuccess";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
+import { useSuccessContext } from "../context/FormSuccessContext";
 
 const Header = () => {
   let screenIntialValue = typeof window !== "undefined" && window.innerWidth;
@@ -23,9 +24,8 @@ const Header = () => {
   const [navIsOpen, closeNav, openNav] = useModal();
   const [isDesktop, closeDesktop, openDesktop] = useModal();
   const [data, error, submitData] = useFetch();
-  const [success, setSuccess] = useState("");
-  const [fail, setFail] = useState("");
   const [screenSize, setScreenSize] = useState(screenIntialValue);
+  const { success, fail } = useSuccessContext();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -53,14 +53,6 @@ const Header = () => {
     }
   }, [screenSize]);
 
-  useEffect(() => {
-    if (data.success) {
-      setSuccess(data);
-    } else {
-      setFail(error);
-    }
-  }, [data]);
-
   return (
     <>
       <header className={headerStyles.header}>
@@ -72,12 +64,14 @@ const Header = () => {
 
         <div>
           <Link href="/">
-            <Image
-              src={logo}
-              width={120}
-              height={120}
-              alt="Transportes ligeros Juank"
-            />
+            <a>
+              <Image
+                src={logo}
+                width={120}
+                height={120}
+                alt="Transportes ligeros Juank"
+              />
+            </a>
           </Link>
 
           <div>
@@ -97,7 +91,7 @@ const Header = () => {
                   style={{ width: "2em", height: "fit-content" }}
                 />
               }
-              clickHandler={openNav}
+              onClick={openNav}
             />
           </div>
         </div>

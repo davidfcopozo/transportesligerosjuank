@@ -2,25 +2,36 @@ import React from "react";
 import Button from "./Button";
 import heroImgStyles from "../styles/components/HeroImg.module.scss";
 import Image from "next/image";
-import heroImg from "../assets/heroImg.jpg";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+
+const ref = React.createRef();
 
 const HeroImg = ({ img, imgAlt, title, btnValue }) => {
+  const { scrollYProgress } = useScroll();
+  let y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+
   return (
-    <div className={heroImgStyles.heroContainer}>
+    <motion.div className={heroImgStyles.heroContainer} style={{ y }}>
       <div className={heroImgStyles.heroImgContainer}>
-        <img src={img} alt={imgAlt} />
-        {/* <Image
-          layout="fill"
-          min-width="100vw"
-          min-height="100vh"
-          src={heroImg.src}
-        /> */}
+        <Image
+          src={img}
+          layout="responsive"
+          width="100%"
+          height="100%"
+          objectFit="cover"
+          objectPosition="center"
+          alt={imgAlt}
+          priority
+        />
       </div>
-      <div className={heroImgStyles.heroText}>
+      <div className={heroImgStyles.heroText} style={{ y }}>
         <h1>{title}</h1>
-        <Button value={btnValue} />
+        <Link href="/contacto" passHref legacyBehavior>
+          <Button ref={ref} value={btnValue} />
+        </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

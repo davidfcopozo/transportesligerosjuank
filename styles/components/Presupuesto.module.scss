@@ -53,6 +53,7 @@
     background-color: rgb(255, 255, 255);
     
     @include laptop {
+      width: 60%;
       padding-block: 1em;
       padding-inline: 3em;
     }
@@ -79,7 +80,7 @@
     }
   
     .inputLabel {
-      @include font(inherit, $mdSize, $darkBlueFont);
+      @include font(inherit, $xsSize, $darkBlueFont);
       transition: .25s ease;
 
     }
@@ -91,6 +92,10 @@
       border-bottom: 2px solid #eee;
       @include font(inherit, $mdSize, inherit);
       padding: .80rem 0;
+
+      @include laptop {
+          font-size: $navFont;
+        }
       
       & * {
         @include font(inherit, $xsSize, inherit);
@@ -118,7 +123,7 @@
         position: relative;
         @include font(inherit, $mdSize, $whiteFont);
         padding: 1rem;
-        width: 90%;
+        width: 80%;
         font-weight: 500;
         border-radius: 6px;
         background-color: $orangeBg;
