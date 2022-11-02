@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "../components/TextError";
 import contactFormStyles from "../styles/components/ContactForm.module.scss";
@@ -9,6 +9,7 @@ import yupContactFormValidation from "../helpers/yupContactFormValidation";
 const ContactForm = ({ submitForm }) => {
   const { contactFormInitialValues, contactFormValidationSchema } =
     yupContactFormValidation();
+  const [btnColor, setBtnColor] = useState("#F04E1B");
 
   return (
     <>
@@ -28,6 +29,15 @@ const ContactForm = ({ submitForm }) => {
               details: true,
             });
           };
+
+          useEffect(() => {
+            setBtnColor(
+              !formik.isValid || formik.isSubmitting
+                ? "gray !important"
+                : "#F04E1B !important"
+            );
+          }, [formik]);
+
           return (
             <div className={contactFormStyles.formContainer}>
               <div className={contactFormStyles.card}>
@@ -120,8 +130,7 @@ const ContactForm = ({ submitForm }) => {
                     !formik.isValid || formik.isSubmitting ? true : false
                   }
                   style={{
-                    backgroundColor:
-                      !formik.isValid || (formik.isSubmitting && "gray"),
+                    backgroundColor: `${btnColor}`,
                   }}
                 >
                   Enviar
