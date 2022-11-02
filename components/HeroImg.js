@@ -22,6 +22,7 @@ const HeroImg = ({ img, imgAlt, title, btnValue }) => {
           objectFit="cover"
           objectPosition="center"
           alt={imgAlt}
+          priority
         />
       </div>
       <div className={heroImgStyles.heroText} style={{ y }}>
