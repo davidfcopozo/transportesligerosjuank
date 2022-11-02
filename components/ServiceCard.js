@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import serviceCardStyles from "../styles/components/ServiceCard.module.scss";
 
-const ServiceCard = ({ img, title, paragraph }) => {
+const ServiceCard = ({ img, title, paragraph, alt }) => {
   return (
     <div className={serviceCardStyles.card}>
       <div className={serviceCardStyles.imgWrapper}>
@@ -14,6 +14,7 @@ const ServiceCard = ({ img, title, paragraph }) => {
           height="100%"
           objectFit="cover"
           objectPosition="center"
+          alt={alt}
         />
       </div>
       <div className={serviceCardStyles.textsWrapper}>
