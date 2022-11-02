@@ -63,28 +63,30 @@ const FormSuccess = ({ success, fail }) => {
       id="successContainer"
       onClick={handleModalContainerClick}
     >
-      {/* <Image
-            layout="fill"
-            className={formSuccessStyles.image}
-            src={checkMark.src}
-            alt="Cotejo verde"
-          /> */}
       <div className={formSuccessStyles.messageBox}>
         <div className={formSuccessStyles.imgContainer}>
           {open ? (
-            <img src={checkMark.src} alt="Cotejo verde" />
+            <Image
+              layout="responsive"
+              width="100%"
+              height="100%"
+              objectFit="cover"
+              objectPosition="center"
+              src={checkMark.src}
+              alt="Cotejo verde"
+            />
           ) : (
-            <img src={xMark.src} alt="Letra X de color rojo" />
-          )}
-        </div>
-        {/* <Image
-              layout="fill"
-              width="20vh"
-              height="200vw"
-              className={formSuccessStyles.image}
+            <Image
+              layout="responsive"
+              width="100%"
+              height="100%"
+              objectFit="cover"
+              objectPosition="center"
               src={xMark.src}
               alt="Letra X de color rojo"
-            /> */}
+            />
+          )}
+        </div>
 
         <h2>{open ? "Enhorabuena!" : "Lo Sentimos"}</h2>
         <p>
