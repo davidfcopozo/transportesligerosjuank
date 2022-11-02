@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeadset,
@@ -68,7 +68,7 @@ const Nav = ({ navIsOpen, closeNav }) => {
           </Link>
         </li>
         <li>
-          <Link href="/contacto">
+          <Link href="/contacto" legacyBehavior>
             <a className="navLi">
               <FontAwesomeIcon icon={faHeadset} /> Contacto
             </a>
