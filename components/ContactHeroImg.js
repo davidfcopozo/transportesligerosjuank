@@ -8,13 +8,14 @@ const ContactHeroImg = ({ img, imgAlt, title, btnValue }) => {
   return (
     <div className={contactHeroImgStyles.heroContainer}>
       <div className={contactHeroImgStyles.heroImgContainer}>
-        {/*  <img src={img} alt={imgAlt} /> */}
-        {/* <Image
-          layout="fill"
-          min-width="100vw"
-          min-height="100vh"
+        <Image
+          layout="responsive"
+          width="100%"
+          height="100%"
+          objectFit="cover"
+          objectPosition="center"
           src={heroImg.src}
-        /> */}
+        />
       </div>
       <div className={contactHeroImgStyles.heroText}>
         <h1>{title}</h1>
