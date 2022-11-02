@@ -4,34 +4,11 @@ import Services from "../components/Services";
 import heroImg from "../assets/chico-furgoneta.jpg";
 import contactHeroImg from "../assets/heroImg.jpg";
 import { motion } from "framer-motion";
+import loadAnimation from "../helpers/loadAnimation";
 
 export default function Home() {
-  const boxVariants = {
-    out: {
-      y: 600,
-    },
-    in: {
-      y: 0,
-      transition: {
-        duration: 0.9,
-        // The first child will appear AFTER the parrent has appeared on the screen
-        delayChildren: 0.3,
-        // The next sibling will appear 0.5s after the previous one
-        staggerChildren: 0.5,
-        stiffness: 2,
-        damping: 1,
-      },
-    },
-  };
+  const { boxVariants, iconVariants } = loadAnimation();
 
-  const iconVariants = {
-    out: {
-      y: 500,
-    },
-    in: {
-      y: 0,
-    },
-  };
   return (
     <motion.div variants={boxVariants} initial="out" animate="in">
       <motion.div variants={iconVariants}>
