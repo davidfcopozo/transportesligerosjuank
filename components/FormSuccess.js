@@ -14,7 +14,7 @@ const FormSuccess = ({ success, fail }) => {
     if (success || fail) {
       setFormSubmitted(true);
     }
-  }, [open]);
+  }, [success]);
 
   const dropIn = {
     hidden: {
@@ -65,27 +65,15 @@ const FormSuccess = ({ success, fail }) => {
     >
       <div className={formSuccessStyles.messageBox}>
         <div className={formSuccessStyles.imgContainer}>
-          {open ? (
-            <Image
-              layout="responsive"
-              width="100%"
-              height="100%"
-              objectFit="cover"
-              objectPosition="center"
-              src={checkMark.src}
-              alt="Cotejo verde"
-            />
-          ) : (
-            <Image
-              layout="responsive"
-              width="100%"
-              height="100%"
-              objectFit="cover"
-              objectPosition="center"
-              src={xMark.src}
-              alt="Letra X de color rojo"
-            />
-          )}
+          <Image
+            layout="responsive"
+            width="100%"
+            height="100%"
+            objectFit="cover"
+            objectPosition="center"
+            src={open ? checkMark.src : xMark.src}
+            alt={open ? "Cotejo verde" : "Letra X de color rojo"}
+          />
         </div>
 
         <h2>{open ? "Enhorabuena!" : "Lo Sentimos"}</h2>
