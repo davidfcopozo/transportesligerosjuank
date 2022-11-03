@@ -15,6 +15,7 @@ const ServiceCard = ({ img, title, paragraph, alt }) => {
           objectFit="cover"
           objectPosition="center"
           alt={alt}
+          priority
         />
       </div>
       <div className={serviceCardStyles.textsWrapper}>
