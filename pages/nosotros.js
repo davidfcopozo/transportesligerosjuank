@@ -1,10 +1,18 @@
 import React from "react";
+import Meta from "../components/Meta";
 import nosotrosStyles from "../styles/pages/Nosotros.module.scss";
 
 const nosotros = () => {
   return (
     <>
-      <div className={nosotrosStyles.container}>
+      <Meta title="Sobre Nosotros" />
+      <div
+        className={nosotrosStyles.container}
+        description="Realizamos mudanzas tanto de particulares como de compañías con
+            transiciones seguras, fluidas y rápidas. Donde quiera y cuando
+            quiera mudarse, estaremos allí para asegurarnos de que no tenga que
+            preocuparse por nada."
+      >
         <div>
           <h2>Juank Transportes Ligeros tu socio de confianza</h2>
           <p>
