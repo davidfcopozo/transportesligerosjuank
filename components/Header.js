@@ -5,7 +5,6 @@ import Nav from "./Nav";
 import headerStyles from "../styles/components/Header.module.scss";
 import logo from "../assets/juank.svg";
 import Button from "./Button";
-/* import HumburgerIcon from "./icons/HumburgerIcon"; */
 import useModal from "../hooks/useModal";
 import btnStyles from "../styles/components/Button.module.scss";
 import { motion } from "framer-motion";
