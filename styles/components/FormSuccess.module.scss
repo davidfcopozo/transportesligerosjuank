@@ -62,7 +62,8 @@
 
     .imgContainer {
       display: grid;
-      height: 100%;      
+      display: -ms-grid;
+      height: 100%;
 
       img {
           height: 50% !important;
