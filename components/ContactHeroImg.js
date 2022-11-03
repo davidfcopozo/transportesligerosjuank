@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import contactHeroImgStyles from "../styles/components/ContactHeroImg.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const ContactHeroImg = ({ img, imgAlt, title, btnValue }) => {
   return (
@@ -19,7 +20,9 @@ const ContactHeroImg = ({ img, imgAlt, title, btnValue }) => {
       </div>
       <div className={contactHeroImgStyles.heroText}>
         <h1>{title}</h1>
-        <Button value={btnValue} />
+        <Link href="/contacto" passHref legacyBehavior>
+          <Button value={btnValue} />
+        </Link>
       </div>
     </div>
   );
