@@ -1,0 +1,38 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+.heroContainer .heroImgContainer {
+  display: grid;
+  height: 30vh;
+}
+@media (min-width: 768px) {
+  .heroContainer .heroImgContainer {
+    height: 60vh;
+  }
+}
+.heroContainer .heroImgContainer img {
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.heroText {
+  font-family: inherit;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: #FFFFFF;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heroText button {
+  width: 8em;
+  background-color: #103BD3;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: #FFFFFF;
+  margin-top: 1rem;
+}/*# sourceMappingURL=HeroImg.module.css.map */

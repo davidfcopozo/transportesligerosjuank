@@ -1,0 +1,153 @@
+.card {
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 525px;
+  background-color: #FFF;
+  box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
+  padding: 0.75rem;
+}
+.card .cardImage {
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 65%;
+  background-image: url("../../assets/presupuesto.jpg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: 0 55%;
+  box-shadow: inset 190px 1px 75px rgba(0, 0, 0, 0.68);
+  position: relative;
+}
+.card .cardImage .cardHeading {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  right: 10%;
+  font-family: inherit;
+  font-size: clamp(1.75rem, 8vw, 2.75rem);
+  color: #E7E8EA;
+  font-weight: 700;
+  line-height: 1.222;
+}
+.card .cardImage .cardHeading small {
+  display: block;
+  font-family: inherit;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: #E7E8EA;
+  font-weight: 400;
+  margin-top: 0.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 10px;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+}
+@media (min-width: 900px) {
+  .form {
+    width: 60%;
+    padding-block: 1em;
+    padding-inline: 3em;
+  }
+}
+.form select:invalid {
+  color: #919295;
+}
+.form input[type=date]:valid::-webkit-datetime-edit {
+  color: #000000;
+}
+.form h3 {
+  color: #091B5D;
+  margin-left: 0.8rem;
+}
+.form .formControl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.8rem;
+}
+.form .inputLabel {
+  font-family: inherit;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: #091B5D;
+  transition: 0.25s ease;
+}
+.form .inputField {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font-family: inherit;
+  font-size: clamp(1rem, 4vw, 2rem);
+  color: inherit;
+  padding: 0.8rem 0;
+}
+@media (min-width: 900px) {
+  .form .inputField {
+    font-size: clamp(0.5em, 3vw, 1em);
+  }
+}
+.form .inputField * {
+  font-family: inherit;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: inherit;
+}
+.form .inputField:focus, .form .inputField:valid {
+  outline: 0;
+  border-bottom-color: #25D366;
+}
+.form .inputField::placeholder, .form textarea::placeholder, .form input[type=date]::-webkit-datetime-edit-text,
+.form input[type=date]::-webkit-datetime-edit-month-field,
+.form input[type=date]::-webkit-datetime-edit-day-field,
+.form input[type=date]::-webkit-datetime-edit-year-field, .form input[type=date]:invalid::-webkit-datetime-edit {
+  font-family: "sans-serif, Arial";
+  font-size: clamp(0.5em, 2vw, 0.8em);
+  color: #919295;
+  font-weight: 600;
+}
+.form .actionBtn {
+  margin-top: 2rem;
+  margin-inline: auto;
+  position: relative;
+  font-family: inherit;
+  font-size: clamp(1rem, 4vw, 2rem);
+  color: #FFFFFF;
+  padding: 1rem;
+  width: 80%;
+  font-weight: 500;
+  border-radius: 6px;
+  background-color: #F04E1B;
+  border: 0;
+}
+@media (min-width: 900px) {
+  .form .actionBtn {
+    width: 50%;
+  }
+}
+.form .actionBtn:focus {
+  outline: 0;
+}
+.form .terms {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-family: inherit;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: #8597a3;
+}
+.form .terms a {
+  display: block;
+  color: #6658d3;
+  text-decoration: none;
+}
+
+/* } *//*# sourceMappingURL=Presupuesto.module.css.map */

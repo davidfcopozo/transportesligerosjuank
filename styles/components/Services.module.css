@@ -1,0 +1,31 @@
+.serviceSection {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 0.2em;
+  margin-inline: auto;
+  margin-top: 2em;
+}
+@media (min-width: 1190px) {
+  .serviceSection {
+    width: 80%;
+  }
+}
+.serviceSection .cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2em;
+}
+.serviceSection .title {
+  font-family: "Fugaz One", sans-serif;
+  font-size: clamp(1rem, 4vw, 2rem);
+  color: #091B5D;
+  border-left: 0.2em solid #F04E1B;
+  padding-left: 0.2em;
+  margin-bottom: 1em;
+  text-align: left;
+}/*# sourceMappingURL=Services.module.css.map */

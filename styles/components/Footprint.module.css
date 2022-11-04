@@ -1,0 +1,36 @@
+.footprint {
+  width: 100%;
+  padding-top: 1em;
+  border-top: 1px solid rgba(231, 232, 234, 0.25);
+  color: #E7E8EA;
+  background: #404040;
+}
+@media (min-width: 900px) {
+  .footprint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    grid-row: 2;
+    grid-area: 2/1/2/4;
+  }
+  .footprint p:nth-of-type(2) {
+    margin-top: 2em;
+    font-family: "sans-serif, Arial";
+    font-size: clamp(0.5em, 2vw, 0.8em);
+    color: #FFFFFF;
+    padding-bottom: 1em;
+  }
+}
+.footprint p {
+  font-family: "Fugaz One", sans-serif;
+  font-size: clamp(0.5em, 2vw, 0.8em);
+  color: #FFFFFF;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.footprint p a {
+  font-family: "Fugaz One", sans-serif;
+  font-size: clamp(0.5em, 2vw, 0.8em);
+  color: #F04E1B;
+}/*# sourceMappingURL=Footprint.module.css.map */

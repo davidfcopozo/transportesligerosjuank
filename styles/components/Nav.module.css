@@ -1,0 +1,104 @@
+.navContainer {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  top: 0;
+}
+@media (min-width: 900px) {
+  .navContainer {
+    position: absolute;
+    height: 0;
+    top: 65%;
+    width: unset;
+    margin-right: -15vw;
+    display: inherit !important;
+  }
+}
+@media (min-width: 1000px) {
+  .navContainer {
+    margin-right: -25vw;
+  }
+}
+@media (min-width: 1190px) {
+  .navContainer {
+    margin-right: -30vw;
+  }
+}
+.navContainer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+}
+@media (min-width: 900px) {
+  .navContainer ul {
+    position: relative;
+    flex-direction: row;
+    font-family: inherit;
+    font-size: clamp(0.5em, 3vw, 1em);
+    color: #FFFFFF;
+    background-color: hsla(227deg, 86%, 45%, 0.9);
+    height: unset;
+    width: unset;
+    list-style-type: none;
+    text-decoration: none;
+  }
+}
+.navContainer ul li {
+  padding-inline: 1rem;
+  margin-block: 2em;
+}
+@media (min-width: 900px) {
+  .navContainer ul li {
+    padding-block: unset;
+    margin-block: unset;
+  }
+}
+.navContainer .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(227deg, 86%, 45%, 0.9);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 80vw;
+}
+.navContainer .nav a {
+  font-family: inherit;
+  font-size: clamp(1.75rem, 8vw, 2.75rem);
+  color: #FFFFFF;
+  list-style-type: none;
+  text-decoration: none;
+}
+@media (min-width: 900px) {
+  .navContainer .nav a {
+    font-family: inherit;
+    font-size: clamp(0.5em, 3vw, 1em);
+    color: #FFFFFF;
+  }
+}
+@media (min-width: 900px) {
+  .navContainer .nav {
+    justify-content: end;
+    position: relative;
+    height: unset;
+    background-color: transparent;
+    width: 100%;
+    right: unset;
+    bottom: unset;
+  }
+}
+
+.navActive {
+  display: flex;
+}/*# sourceMappingURL=Nav.module.css.map */

@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 90%;
+  margin-top: 12vh;
+  margin-bottom: 1em;
+}
+@media (min-width: 900px) {
+  .container {
+    margin-top: 15vh;
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+.container div:nth-of-type(1) {
+  margin-bottom: 1em;
+  margin-inline: auto;
+}
+@media (min-width: 1190px) {
+  .container div:nth-of-type(1) {
+    width: 60%;
+  }
+}
+.container h2, .container h3 {
+  font-family: inherit;
+  font-size: clamp(1.75rem, 8vw, 2.75rem);
+  color: #091B5D;
+  font-weight: lighter;
+  margin-bottom: 0.8em;
+}
+@media (min-width: 900px) {
+  .container h2, .container h3 {
+    font-size: clamp(1rem, 4vw, 2rem);
+  }
+}
+@media (min-width: 1144px) {
+  .container h2, .container h3 {
+    width: 80%;
+  }
+}
+.container h3 {
+  font-family: inherit;
+  font-size: clamp(1rem, 4vw, 2rem);
+  color: #091B5D;
+}
+.container p {
+  font-family: inherit;
+  font-size: clamp(1rem, 4vw, 2rem);
+  color: #4C525A;
+  text-align: left;
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+@media (min-width: 900px) {
+  .container p {
+    font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  }
+}
+.container div:nth-of-type(2) p {
+  margin-bottom: 0.5em;
+}
+.container div:nth-of-type(2) div {
+  display: flex;
+  margin-inline: 0;
+  width: auto;
+}
+.container div:nth-of-type(2) div p {
+  font-family: inherit;
+  font-size: clamp(0.5em, 3vw, 1em);
+  color: #4C525A;
+  margin-bottom: 1em;
+}
+.container div:nth-of-type(2) div a {
+  font-family: inherit;
+  font-size: clamp(0.5em, 3vw, 1em);
+  color: #F04E1B;
+  list-style-type: none;
+  text-decoration: none;
+}
+.container div:nth-of-type(2) div a span {
+  font-weight: bold;
+}
+.container div:nth-of-type(2) div .letterO {
+  margin-inline: 0.3em;
+}/*# sourceMappingURL=Nosotros.module.css.map */

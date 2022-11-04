@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+.header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-inline: auto;
+  font-family: "Fugaz One", sans-serif;
+  background-color: #103BD3;
+  z-index: 100000;
+}
+.header div:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #E7E8EA;
+  padding-block: 0.3em;
+}
+.header div:nth-of-type(1) a {
+  text-decoration: none;
+  color: #091B5D;
+}
+.header div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+  align-items: center;
+  height: 5vh;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .header div:nth-of-type(2) {
+    height: 8vh;
+  }
+}
+.header div:nth-of-type(2) div:nth-of-type(1) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent !important;
+}
+@media (min-width: 768px) {
+  .header div:nth-of-type(2) div:nth-of-type(1) {
+    gap: 1rem;
+  }
+}
+.header div:nth-of-type(2) button:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+}
+@media (min-width: 900px) {
+  .header div:nth-of-type(2) button:nth-of-type(2) {
+    display: none;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

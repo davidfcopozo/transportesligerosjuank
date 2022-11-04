@@ -1,0 +1,9 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-top: 15vh;
+  width: 80%;
+}/*# sourceMappingURL=Contact.module.css.map */

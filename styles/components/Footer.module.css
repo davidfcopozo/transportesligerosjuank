@@ -1,0 +1,120 @@
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #404040;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: #FFFFFF;
+}
+@media (min-width: 900px) {
+  .footer {
+    align-items: center;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid: none;
+    padding-top: 2em;
+  }
+}
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+.footer > div a {
+  font-family: "sans-serif, Arial";
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+  color: #FFFFFF;
+  font-weight: lighter;
+  text-decoration: none;
+  list-style: none;
+}
+.footer .contactIcons {
+  gap: 2em;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2em;
+}
+@media (min-width: 900px) {
+  .footer .contactIcons {
+    flex-direction: column;
+  }
+}
+@media (min-width: 900px) {
+  .footer .contactIcons {
+    grid-area: 1/3/1/4;
+  }
+}
+.footer .contactIcons div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media (min-width: 900px) {
+  .footer .contactIcons div {
+    flex-direction: row;
+  }
+}
+.footer hr {
+  position: relative;
+  background-color: #E7E8EA;
+  width: 80%;
+  opacity: 0.2;
+  margin: 0;
+}
+@media (min-width: 900px) {
+  .footer hr {
+    height: 15vh;
+    grid-area: 1/3/1/2;
+    width: auto;
+    margin-inline: 3em;
+  }
+}
+.footer .socialFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  padding-bottom: 2em;
+}
+.footer .socialFooter .imgContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .footer .socialFooter .imgContainer {
+    min-width: 100%;
+  }
+}
+.footer .socialFooter .imgContainer img {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  display: block;
+}
+.footer .socialFooter .footprint {
+  display: flex;
+}
+.footer .socialFooter .footprint div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  padding: 1em;
+  border-radius: 50%;
+  border: solid 1px #E7E8EA;
+  margin-inline: 1em;
+}
+@media (min-width: 900px) {
+  .footer .socialFooter .footprint div {
+    width: 2em;
+    height: 2em;
+  }
+}/*# sourceMappingURL=Footer.module.css.map */
