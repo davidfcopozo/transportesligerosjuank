@@ -13,7 +13,7 @@ import Presupuesto from "./Presupuesto";
 import useFetch from "../hooks/useFetch";
 import FormSuccess from "./FormSuccess";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useSuccessContext } from "../context/FormSuccessContext";
 
 const Header = () => {
@@ -85,12 +85,23 @@ const Header = () => {
 
             <Button
               value={
-                <FontAwesomeIcon
-                  icon={faBars}
-                  style={{ width: "2em", height: "fit-content" }}
-                />
+                navIsOpen ? (
+                  <FontAwesomeIcon
+                    icon={faXmark}
+                    style={{
+                      width: "2em",
+                      height: "fit-content",
+                      zIndex: "1000000",
+                    }}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faBars}
+                    style={{ width: "2em", height: "fit-content" }}
+                  />
+                )
               }
-              onClick={openNav}
+              onClick={navIsOpen ? closeNav : openNav}
             />
           </div>
         </div>
