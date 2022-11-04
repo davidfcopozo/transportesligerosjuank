@@ -26,7 +26,6 @@
     
     @include large {
       margin-right: -30vw;
-      /* top: 65%; */
   }
 
   ul {
@@ -52,7 +51,7 @@
 
     li {
       padding-inline: 1rem;
-      margin-block: 1em;
+      margin-block: 2em;
       
       @include laptop {
         padding-block: unset;
@@ -74,7 +73,7 @@
     width: 80vw;
 
     a{
-      @include font(inherit, $mdSize, $whiteFont);
+      @include font(inherit, $xlSize, $whiteFont);
       list-style-type: none;
       text-decoration: none;
 
