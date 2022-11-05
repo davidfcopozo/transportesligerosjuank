@@ -14,7 +14,7 @@
   z-index: 10000;
   
   @include laptop {
-    margin-top: 11vh;
+    margin-top: 12vh;
 
   }
   
@@ -42,7 +42,7 @@
     @include laptop {
       width: 30px;
       height: 30px;
-      right: 23%;
+      right: 26%;
     }
   }
 }
