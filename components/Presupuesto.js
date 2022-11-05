@@ -4,6 +4,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
 import yupFormValidation from "../helpers/yupFormValidation";
 import { motion } from "framer-motion";
+import presupuestoImage from "../assets/presupuesto.jpg";
+import Image from "next/image";
 
 const Presupuesto = ({ submitData }) => {
   const { initialValues, validationSchema } = yupFormValidation();
@@ -34,10 +36,21 @@ const Presupuesto = ({ submitData }) => {
             <Form className={presupuestoStyles.form}>
               <div className={presupuestoStyles.card}>
                 <div className={presupuestoStyles.cardImage}>
-                  <h2 className={presupuestoStyles.cardHeading}>
-                    Empecemos
-                    <small>Obten tu presupuesto gratis</small>
-                  </h2>
+                  <Image
+                    src={presupuestoImage.src}
+                    layout="responsive"
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                    objectPosition="center"
+                    alt="Persona escribiendo en libreta"
+                  />
+                  <div className={presupuestoStyles.cardHeading}>
+                    <h2>
+                      Empecemos
+                      <small>Obten tu presupuesto gratis</small>
+                    </h2>
+                  </div>
                 </div>
               </div>
 
