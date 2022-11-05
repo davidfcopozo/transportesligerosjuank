@@ -40,7 +40,7 @@ const ContactForm = ({ submitForm }) => {
                     height="100%"
                     objectFit="cover"
                     objectPosition="center"
-                    alt="Persona escribiendo con libreta"
+                    alt="Persona escribiendo en libreta"
                   />
                 </div>
               </div>
