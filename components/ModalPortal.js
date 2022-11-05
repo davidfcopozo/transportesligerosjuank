@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import modalPortalStyles from "../styles/components/ModalPortal.module.scss";
 
 const ModalPortal = ({ children, isOpen, closeModal, data, error }) => {
@@ -55,7 +57,14 @@ const ModalPortal = ({ children, isOpen, closeModal, data, error }) => {
       id="modalContainer"
     >
       <button className={modalPortalStyles.closeBtn} onClick={closeModal}>
-        &times;
+        <FontAwesomeIcon
+          icon={faXmark}
+          style={{
+            width: "2em",
+            height: "fit-content",
+            zIndex: "1000000",
+          }}
+        />
       </button>
       {children}
     </motion.div>
