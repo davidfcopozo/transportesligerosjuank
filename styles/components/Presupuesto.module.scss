@@ -5,31 +5,43 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 525px;
+  max-width: 250px;
   background-color: #FFF;
   box-shadow: 0 10px 20px 0 rgba(#999, .25);
   padding: .75rem;
+  
+  @include laptop {
+    max-width: 350px;
+  }
 
   .cardImage {
+    display: grid;
+    position: relative; 
     border-radius: 8px;
-    overflow: hidden;
-    padding-bottom: 65%;
-    background-image: url('../../assets/presupuesto.jpg');
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 0 55%;
-    box-shadow: inset 190px 1px 75px rgba(0, 0, 0, 0.68);
-    position: relative;
+    
+    img {
+      height: 100% !important;
+    }
     
     .cardHeading {
+      box-shadow: inset 75px 1px 190px rgb(0 0 0 / 70%);
       position: absolute;
-      left: 10%;
-      top: 15%;
-      right: 10%;
-      @include font(inherit, $xlSize, $lightGrayBg);
+      width: 100%;
+      height: 100%;
       font-weight: 700;
       line-height: 1.222;
-    
+      
+      h2 {
+        position: absolute;
+        @include font($fugazOne, $xlSize, $lightGrayBg);
+        top: 15%;
+        left: 5%;
+      }
+      
+      @include laptop {
+        font-size: $xlSize;
+      }
+      
       small {
         display: block;
         @include font(inherit, $xsSize, $lightGrayBg);
@@ -53,7 +65,7 @@
     background-color: rgb(255, 255, 255);
     
     @include laptop {
-      width: 60%;
+      width: 50%;
       padding-block: 1em;
       padding-inline: 3em;
     }
@@ -140,8 +152,11 @@
     .terms {
       padding: 1rem 1rem;
       text-align: center;
-    
       @include font(inherit, $xsSize, #8597a3);
+
+      @include laptop {
+        font-size: $footprintFont;
+      }
   
       a {
         display: block;
