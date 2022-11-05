@@ -6,6 +6,7 @@ import yupFormValidation from "../helpers/yupFormValidation";
 import { motion } from "framer-motion";
 import presupuestoImage from "../assets/presupuesto.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Presupuesto = ({ submitData }) => {
   const { initialValues, validationSchema } = yupFormValidation();
@@ -228,7 +229,9 @@ const Presupuesto = ({ submitData }) => {
               <div className={presupuestoStyles.terms}>
                 <p>
                   Al someter este formulario está aceptando nuestros
-                  <a href="#">Terminos y condiciones</a>
+                  <Link href="/terminos" passHref legacyBehavior>
+                    <a>Terminos y condiciones</a>
+                  </Link>
                 </p>
               </div>
             </Form>

@@ -5,6 +5,7 @@ import contactFormStyles from "../styles/components/ContactForm.module.scss";
 import Image from "next/image";
 import contactImage from "../assets/presupuesto.jpg";
 import yupContactFormValidation from "../helpers/yupContactFormValidation";
+import Link from "next/link";
 
 const ContactForm = ({ submitForm }) => {
   const { contactFormInitialValues, contactFormValidationSchema } =
@@ -132,7 +133,9 @@ const ContactForm = ({ submitForm }) => {
                 <div className={contactFormStyles.terms}>
                   <p>
                     Al someter este formulario está aceptando nuestros
-                    <a href="#">Terminos y condiciones</a>
+                    <Link href="/terminos" passHref legacyBehavior>
+                      <a>Terminos y condiciones</a>
+                    </Link>
                   </p>
                 </div>
               </Form>
