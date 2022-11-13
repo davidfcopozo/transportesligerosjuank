@@ -20,7 +20,6 @@
     width: 100%;
     background-color: $lightGrayBg;
     padding-block: 0.3em;
- 
 
     a {
       text-decoration: none;
@@ -45,7 +44,7 @@
       justify-content: flex-end;
       align-items: center;
       gap: 0.5rem;
-      background-color: transparent !important;
+      background-color: transparent;
       
       @include tablet {
           gap: 1rem;
@@ -58,6 +57,13 @@
       align-items: center;
       background-color: transparent;
       width: fit-content;
+      height: fit-content;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
       cursor: pointer;
       text-align: center;
       @include laptop {
