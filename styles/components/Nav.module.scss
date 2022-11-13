@@ -73,7 +73,7 @@
     width: 80vw;
 
     a{
-      @include font(inherit, $xlSize, $whiteFont);
+      @include font(inherit, $biggerNavFont, $whiteFont);
       list-style-type: none;
       text-decoration: none;
 
