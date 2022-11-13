@@ -18,12 +18,11 @@
 
   }
   
-  
   .closeBtn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: none;
+    padding: 0;
     position: absolute;
     background-color: transparent;
     @include font(inherit, $mdSize, $grayFont);
@@ -36,7 +35,7 @@
     width: 20px;
     height: 20px;
     right: 10%;
-    top: 2%;
+    top: 3%;
     z-index: 999;
     
     @include laptop {
@@ -48,4 +47,6 @@
 }
 .isActive {
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
 }
