@@ -44,6 +44,10 @@ const Header = () => {
     }
   });
 
+  const openModalHandler = () => {
+    isOpen ? closeModal() : openModal();
+  };
+
   useEffect(() => {
     if (screenSize > 900) {
       openNav();
@@ -78,7 +82,7 @@ const Header = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className={btnStyles.btn}
-              onClick={openModal}
+              onClick={openModalHandler}
             >
               PRESUPUESTO
             </motion.button>
