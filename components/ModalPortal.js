@@ -17,7 +17,7 @@ const ModalPortal = ({ children, isOpen, closeModal, data, error }) => {
 
   const dropIn = {
     hidden: {
-      y: "-100vh",
+      y: "-110vh",
       opacity: 0,
     },
     visible: {
@@ -60,8 +60,10 @@ const ModalPortal = ({ children, isOpen, closeModal, data, error }) => {
         <FontAwesomeIcon
           icon={faXmark}
           style={{
-            width: "2em",
-            height: "fit-content",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            width: "1.5em",
             zIndex: "1000000",
           }}
         />
