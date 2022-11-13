@@ -60,9 +60,6 @@ const ModalPortal = ({ children, isOpen, closeModal, data, error }) => {
         <FontAwesomeIcon
           icon={faXmark}
           style={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
             width: "1.5em",
             zIndex: "1000000",
           }}
