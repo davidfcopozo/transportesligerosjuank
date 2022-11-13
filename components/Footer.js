@@ -10,6 +10,7 @@ import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import logoIcon from "../assets/juank.svg";
 import Image from "next/image";
 import Footprint from "./Footprint";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -36,7 +37,16 @@ const Footer = () => {
 
         <div className={footerStyles.socialFooter}>
           <div className={footerStyles.imgContainer}>
-            <Image src={logoIcon.src} width="100%" height="100%" alt="Logo de JuanK transportes ligeros"/>
+            <Link href="/">
+              <a>
+                <Image
+                  src={logoIcon.src}
+                  width="100%"
+                  height="100%"
+                  alt="Logo de JuanK transportes ligeros"
+                />
+              </a>
+            </Link>
           </div>
 
           <div className={footerStyles.footprint}>
