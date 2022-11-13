@@ -4,7 +4,11 @@
 .successContainer {
   display: none;
   position: fixed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100vw;
   margin-top: 8vh;
@@ -22,13 +26,21 @@
   }
 
   .messageBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 90%;
     max-width: 425px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background-color: $whiteFont;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: 10px;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(#999, .25);
     box-shadow: 0 10px 20px 0 rgba(#999, .25);
     padding: .75rem;
     @include font($fugazOne, $mdSize, $darkBlueFont);
@@ -81,4 +93,6 @@
 
 .isActive {
   display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
 }
