@@ -91,7 +91,6 @@ const Header = () => {
                     style={{
                       width: "2em",
                       height: "fit-content",
-                      zIndex: "1000000",
                     }}
                   />
                 ) : (
