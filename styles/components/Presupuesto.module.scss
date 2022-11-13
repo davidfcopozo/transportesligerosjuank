@@ -63,6 +63,7 @@
     position: relative;
     height: fit-content;
     background-color: rgb(255, 255, 255);
+    padding-top: 2em;
     
     @include laptop {
       width: 50%;
@@ -72,6 +73,7 @@
     
     select:invalid {
       color: $grayFont;
+      @include font(inherit, $navFont, $grayFont);
     }
     
       input[type="date"]:valid::-webkit-datetime-edit {
@@ -94,7 +96,6 @@
     .inputLabel {
       @include font(inherit, $xsSize, $darkBlueFont);
       transition: .25s ease;
-
     }
   
     .inputField {
@@ -125,7 +126,7 @@
       input[type="date"]::-webkit-datetime-edit-month-field,
       input[type="date"]::-webkit-datetime-edit-day-field,
       input[type="date"]::-webkit-datetime-edit-year-field, input[type=date]:invalid::-webkit-datetime-edit  {
-      @include font($sansSerif, $footprintFont, $grayFont);
+      @include font($sansSerif, $navFont, $grayFont);
       font-weight: 600;    
     }
   
