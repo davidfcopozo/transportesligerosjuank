@@ -75,6 +75,7 @@
     .imgContainer {
       display: grid;
       display: -ms-grid;
+      align-items: flex-start;
       height: 100%;
 
       img {
