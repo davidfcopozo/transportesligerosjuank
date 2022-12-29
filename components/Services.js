@@ -7,6 +7,7 @@ import servicioEmbalaje from "../assets/heroImg.jpg";
 import mercanciaPaletizada from "../assets/mercancia-paletizada.jpg";
 import retiradaEscombros from "../assets/retirada-escombros.jpg";
 import naveLimpieza from "../assets/nave-limpieza.jpg";
+import desalojoNave from "../assets/desalojo-nave.jpg";
 
 const Services = () => {
   return (
@@ -58,6 +59,11 @@ const Services = () => {
         />
 
         <ServiceCard
+          img={desalojoNave.src}
+          title="Desalojo"
+          paragraph="Si necesitas desalojar tu piso, casa o nave aquí estaremos para ayudarte."
+          alt="Desalojo de nave"
+        />
       </div>
     </section>
   );
