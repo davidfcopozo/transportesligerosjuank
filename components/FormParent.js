@@ -19,13 +19,14 @@ const FormParent = () => {
   const { setSuccess, setFail } = useSuccessContext();
 
   const submitForm = (values, onSubmitProps) => {
-    fetch("https://formsubmit.co/ajax/indidseo@gmail.com", {
+    fetch("https://formsubmit.co/ajax/juanjolar30@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify({
+        Formulario: "de Contacto",
         Nombre: values.name,
         Telefono: values.cel,
         Correo: values.email,
