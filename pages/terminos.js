@@ -78,7 +78,7 @@ const terminos = () => {
         <p>Datos de contacto para ejercer sus derechos:</p>
         <p>JUAN JOSE LARDIES</p>
         {/* <p> ZARAGOZA (Zaragoza)</p> */}
-        <p>E-mail: EXAMPLE@gmail.com</p>
+        <p>E-mail: juanjolar30@gmail.com</p>
         <h3>
           CARÁCTER OBLIGATORIO O FACULTATIVO DE LA INFORMACIÓN FACILITADA POR EL
           USUARIO
@@ -127,7 +127,7 @@ const terminos = () => {
         <p>Datos de contacto para ejercer sus derechos:</p>
         <p>JUAN JOSE LARDIES</p>
         {/* <p> ZARAGOZA (Zaragoza)</p> */}
-        <p>E-mail: EXAMPLE@gmail.com</p>
+        <p>E-mail: juanjolar30@gmail.com</p>
       </div>
     </>
   );
