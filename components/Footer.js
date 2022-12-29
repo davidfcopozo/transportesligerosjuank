@@ -24,13 +24,8 @@ const Footer = () => {
 
           <div>
             <FontAwesomeIcon icon={faEnvelopesBulk} />
-            <a href="emailto:indidseo@gmail.com">example@mail.com</a>
+            <a href="juanjolar30@gmail.com">juanjolar30@gmail.com</a>
           </div>
-
-          {/* <div>
-          <FontAwesomeIcon icon={faLocationCrosshairs} />
-          <a href="emailto:indidseo@gmail.com">example@mail.com</a>
-        </div> */}
         </div>
 
         <hr />
