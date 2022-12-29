@@ -6,6 +6,7 @@ import recogidaTienda from "../assets/recogida-tienda.jpg";
 import servicioEmbalaje from "../assets/heroImg.jpg";
 import mercanciaPaletizada from "../assets/mercancia-paletizada.jpg";
 import retiradaEscombros from "../assets/retirada-escombros.jpg";
+import naveLimpieza from "../assets/nave-limpieza.jpg";
 
 const Services = () => {
   return (
@@ -48,6 +49,15 @@ const Services = () => {
           paragraph="Retiramos los escombros de tus obras de manera rápida y eficaz."
           alt="Mercancias paletizadas"
         />
+
+        <ServiceCard
+          img={naveLimpieza.src}
+          title="Limpieza"
+          paragraph="Ofrecemos una manera fácil y asequible de limpiar tu piso y/o nave."
+          alt="Limpieza de nave"
+        />
+
+        <ServiceCard
       </div>
     </section>
   );
