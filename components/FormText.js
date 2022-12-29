@@ -15,7 +15,7 @@ const FormText = () => {
         <div>
           <FontAwesomeIcon icon={faEnvelopesBulk} />
           {"  "}
-          <a href="emailto:indidseo@gmail.com"></a>
+          <a href="emailto:juanjolar30@gmail.com"></a>
         </div>
 
         <div>
