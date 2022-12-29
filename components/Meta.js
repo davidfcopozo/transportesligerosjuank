@@ -18,7 +18,7 @@ Meta.defaultProps = {
   title: "Transportes Ligeros Juank",
   keywords:
     "Mudanzas en Zaragoza, Mudanzas, Transportes ligeros, Servicio de embalaje, Mercancia paletizada, Carga y descarga, Retirada de escombros",
-  description: "Servicios de transportes ligeros.,",
+  description: "Servicios de transportes ligeros.",
 };
 
 export default Meta;
