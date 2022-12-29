@@ -8,13 +8,14 @@ const useFetch = () => {
   const { setSuccess, setFail } = useSuccessContext();
 
   const submitData = (values, onSubmitProps) => {
-    fetch("https://formsubmit.co/ajax/indidseo@gmail.com", {
+    fetch("https://formsubmit.co/ajax/juanjolar30@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify({
+        Formulario: "de Presupuesto",
         Servicio: values.servicio,
         Nombre: values.nombre,
         Telefono: values.numTel,
