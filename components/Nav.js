@@ -54,7 +54,7 @@ const Nav = ({ navIsOpen, closeNav }) => {
     >
       <ul className={`${navStyles.nav}`}>
         <li>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <a className="navLi">
               <FontAwesomeIcon icon={faHouseChimney} /> Inicio
             </a>
