@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Layout from "../components/Layout";
 import "../styles/globals.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
